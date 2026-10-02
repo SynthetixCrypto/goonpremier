@@ -44,11 +44,13 @@
 
 	// ---------- Screenshot tabs ----------
 	var captions = {
-		hud: "<strong>In game.</strong> Coordinates, the compass strip with waypoint markers, Mob Info on the husk you're looking at, potion timers, armour durability and the item counter.",
+		hud: "<strong>In game.</strong> Mob Info beside the crosshair, a health bar and damage number over the husk, potion timers, armour, the Loot Tracker and shield status.",
 		menu: "<strong>ClickGUI.</strong> Press Right Shift for every module, sorted into categories with search and a count of what's on.",
 		settings: "<strong>Settings.</strong> Every module has its own page of toggles and sliders, like Zoom's level, scroll and smoothing options.",
 		editor: "<strong>HUD editor.</strong> Drag panels anywhere, scroll to resize and right-click to hide. Positions stay put at any resolution.",
-		title: "<strong>Main menu.</strong> A custom title screen over a blurred panorama, in the same glass style as the rest of the client."
+		overlays: "<strong>Overlays.</strong> At night the Spawn Overlay marks every block a mob could spawn on, with chunk borders and spawn range rings for farm planning.",
+		log: "<strong>Adventure Log.</strong> Press J for everything that happened in this world: deaths and what killed you, bosses, rare finds, advancements and trips.",
+		title: "<strong>Main menu.</strong> A custom title screen over a dimmed, blurred panorama, in the same graphite style as the rest of the client."
 	};
 	var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
 	var viewer = document.getElementById("viewer");

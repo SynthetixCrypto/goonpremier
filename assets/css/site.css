@@ -1,4 +1,4 @@
-/* Goon Client site. Dark glass look matching the client and launcher. */
+/* Goon Client site. "Graphite" look matching the client and launcher: neutral surfaces, one mint accent. */
 
 @font-face {
 	font-family: "Poppins";
@@ -16,19 +16,20 @@
 
 :root {
 	color-scheme: dark;
-	--bg: #07090f;
-	--bg-2: #0b0e16;
-	--panel: rgba(17, 21, 31, 0.66);
-	--panel-strong: rgba(20, 25, 37, 0.86);
+	--bg: #0d0e10;
+	--bg-2: #111214;
+	--panel: rgba(24, 25, 28, 0.9);
+	--panel-strong: rgba(30, 31, 35, 0.96);
 	--line: rgba(255, 255, 255, 0.07);
 	--line-2: rgba(255, 255, 255, 0.13);
-	--text: #f2f4f8;
-	--muted: #8d96a8;
-	--soft: #b9c1ce;
-	--a1: #55d4ff;
-	--a2: #a05cff;
-	--good: #5be37d;
-	--warn: #ffc94d;
+	--text: #f4f5f7;
+	--muted: #8b9099;
+	--soft: #b9bdc5;
+	--a1: #3ddc97;
+	--a2: #3ddc97;
+	--on-accent: #08130e;
+	--good: #4ade80;
+	--warn: #f5b83d;
 	--radius: 18px;
 	--radius-sm: 12px;
 	--max: 1160px;
@@ -96,10 +97,7 @@ p {
 }
 
 .grad {
-	background: linear-gradient(90deg, var(--a1), var(--a2));
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
+	color: var(--text);
 }
 
 .skip {
@@ -163,13 +161,13 @@ p {
 
 .btn-primary {
 	border: 0;
-	background: linear-gradient(90deg, var(--a1), var(--a2));
-	color: #0a0d14;
+	background: var(--a1);
+	color: var(--on-accent);
 	box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(255, 255, 255, 0.14);
 }
 
 .btn-primary:hover {
-	background: linear-gradient(90deg, var(--a1), var(--a2));
+	background: var(--a1);
 	box-shadow: 0 16px 30px -14px rgba(0, 0, 0, 0.75), inset 0 0 0 1px rgba(255, 255, 255, 0.24);
 	filter: brightness(1.06);
 }
@@ -197,7 +195,7 @@ p {
 }
 
 .nav.scrolled {
-	background: rgba(7, 9, 15, 0.72);
+	background: rgba(13, 14, 16, 0.8);
 	border-bottom-color: var(--line);
 	-webkit-backdrop-filter: blur(16px);
 	backdrop-filter: blur(16px);
@@ -319,8 +317,8 @@ p {
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: radial-gradient(60% 50% at 50% 30%, transparent, rgba(7, 9, 15, 0.55) 70%),
-		linear-gradient(180deg, rgba(7, 9, 15, 0.35) 0%, rgba(7, 9, 15, 0.6) 55%, var(--bg) 100%);
+	background: radial-gradient(60% 50% at 50% 30%, transparent, rgba(13, 14, 16, 0.55) 70%),
+		linear-gradient(180deg, rgba(13, 14, 16, 0.4) 0%, rgba(13, 14, 16, 0.65) 55%, var(--bg) 100%);
 }
 
 .pill {
@@ -330,7 +328,7 @@ p {
 	padding: 6px 14px 6px 8px;
 	border-radius: 999px;
 	border: 1px solid var(--line-2);
-	background: rgba(12, 15, 23, 0.6);
+	background: rgba(17, 18, 20, 0.75);
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 	color: var(--soft);
@@ -338,10 +336,11 @@ p {
 }
 
 .pill b {
-	padding: 2px 10px;
+	padding: 4px 10px;
+	line-height: 1.2;
 	border-radius: 999px;
-	background: linear-gradient(90deg, var(--a1), var(--a2));
-	color: #0a0d14;
+	background: var(--a1);
+	color: var(--on-accent);
 	font-weight: 600;
 	font-size: 12px;
 }
@@ -394,11 +393,11 @@ p {
 .hero-shot::before {
 	content: "";
 	position: absolute;
-	inset: 12% 6% -6%;
+	inset: 10% 4% -4%;
 	z-index: -1;
-	filter: blur(60px);
-	opacity: 0.45;
-	background: linear-gradient(90deg, var(--a1), var(--a2));
+	filter: blur(50px);
+	opacity: 0.6;
+	background: #000;
 	border-radius: 50%;
 }
 
@@ -412,7 +411,7 @@ p {
 	aspect-ratio: 16 / 9;
 	object-fit: cover;
 	border-radius: 15px;
-	background: #0c0f17;
+	background: #111214;
 }
 
 /* ---------- Stats ---------- */
@@ -497,13 +496,7 @@ section {
 }
 
 .feature::after {
-	content: "";
-	position: absolute;
-	inset: 0 0 auto;
-	height: 1px;
-	background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--a1) 60%, transparent), transparent);
-	opacity: 0;
-	transition: opacity 0.3s;
+	content: none;
 }
 
 .feature:hover::after {
@@ -575,7 +568,7 @@ kbd {
 	padding: 0;
 	border-radius: 50%;
 	border: 2px solid rgba(255, 255, 255, 0.12);
-	background: linear-gradient(135deg, var(--s1), var(--s2));
+	background: var(--s1);
 	cursor: pointer;
 	transition: transform 0.2s var(--ease), border-color 0.2s, box-shadow 0.2s;
 }
@@ -620,9 +613,9 @@ kbd {
 }
 
 .tab[aria-selected="true"] {
-	background: linear-gradient(90deg, color-mix(in srgb, var(--a1) 26%, transparent), color-mix(in srgb, var(--a2) 26%, transparent));
+	background: rgba(255, 255, 255, 0.09);
 	color: var(--text);
-	box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--a1) 40%, transparent);
+	font-weight: 600;
 }
 
 .viewer {
@@ -635,7 +628,7 @@ kbd {
 	aspect-ratio: 16 / 9;
 	border-radius: 15px;
 	overflow: hidden;
-	background: #0c0f17;
+	background: #111214;
 }
 
 .viewer .stage img {
@@ -685,13 +678,7 @@ kbd {
 }
 
 .launcher-shot::before {
-	content: "";
-	position: absolute;
-	inset: 15% 10%;
-	z-index: -1;
-	filter: blur(70px);
-	opacity: 0.35;
-	background: linear-gradient(90deg, var(--a1), var(--a2));
+	content: none;
 }
 
 .split h2 {
@@ -743,7 +730,7 @@ kbd {
 
 .pack {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 16px;
 }
 
@@ -955,14 +942,7 @@ kbd {
 }
 
 .cta::before {
-	content: "";
-	position: absolute;
-	inset: -40% 10% auto;
-	height: 300px;
-	filter: blur(80px);
-	opacity: 0.35;
-	background: linear-gradient(90deg, var(--a1), var(--a2));
-	z-index: -1;
+	content: none;
 }
 
 .cta h2 {
@@ -1186,6 +1166,10 @@ footer {
 
 	.pack {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.tabs {
+		width: 100%;
 	}
 
 	.split {
