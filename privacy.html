@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Privacy and Sign-in</title>
+	<meta name="description" content="How Goon Client signs you in with Microsoft, what it stores on your computer and which services it talks to. No tracking, no data collection.">
+	<meta name="theme-color" content="#07090f">
+	<link rel="canonical" href="https://goonnation.xyz/privacy.html">
+	<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png">
+	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+	<meta property="og:type" content="article">
+	<meta property="og:site_name" content="Goon Nation">
+	<meta property="og:title" content="Goon Client: privacy and sign-in">
+	<meta property="og:description" content="How Goon Client signs you in with Microsoft and what it does (and doesn't) do with your account.">
+	<meta property="og:image" content="https://goonnation.xyz/assets/img/og.jpg">
+	<link rel="stylesheet" href="assets/css/site.css">
+	<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+	<a class="skip" href="#main">Skip to content</a>
+
+	<header class="nav" id="nav">
+		<div class="wrap nav-inner">
+			<a class="brand" href="./" aria-label="Goon Client home">
+				<img src="assets/img/icon.png" alt="" width="34" height="34">
+				<span class="brand-name"><strong>GOON CLIENT</strong><span>by Goon Nation</span></span>
+			</a>
+			<ul class="nav-links" id="nav-links">
+				<li><a href="./#features">Features</a></li>
+				<li><a href="./#screenshots">Screenshots</a></li>
+				<li><a href="./#launcher">Launcher</a></li>
+				<li><a href="./#changelog">Changelog</a></li>
+				<li><a href="./#faq">FAQ</a></li>
+			</ul>
+			<a class="btn btn-primary" href="./#download">Download</a>
+			<button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+			</button>
+		</div>
+	</header>
+
+	<main id="main" class="wrap">
+		<article class="doc">
+			<h1>Privacy and sign-in</h1>
+			<p class="lede">The short version: Goon Client doesn't collect, sell or share anything about you. There are no Goon Nation servers that your data goes to. Here is exactly what happens with your account.</p>
+			<p class="updated">Last updated 2 October 2026</p>
+
+			<section class="glass">
+				<h2>Who makes Goon Client</h2>
+				<p>Goon Client is a free, non-commercial Minecraft: Java Edition client and launcher made by Goon Nation, a group of friends who play together. It has no ads, no paid features and no analytics.</p>
+			</section>
+
+			<section class="glass" id="sign-in">
+				<h2>How signing in works</h2>
+				<p>Goon Client uses Microsoft's standard sign-in for devices. You never type your password into Goon Client.</p>
+				<ol>
+					<li>The launcher shows a short code and opens <code>microsoft.com/link</code> in your browser.</li>
+					<li>You enter the code and sign in on Microsoft's own page. Microsoft asks you to allow two permissions: <code>XboxLive.signin</code> (sign in to Xbox Live, which Minecraft uses) and <code>offline_access</code> (stay signed in so you don't have to do this every time).</li>
+					<li>The launcher swaps Microsoft's token for an Xbox Live token, then for a Minecraft token, the same way the official Minecraft Launcher does.</li>
+					<li>It reads your Minecraft profile (name, UUID and skin) to check that the account owns Minecraft: Java Edition. Accounts that don't own the game can't play.</li>
+				</ol>
+				<p>Until Mojang approves Goon Client's app for the Minecraft API, pressing Play hands you over to the official Minecraft Launcher, which signs you in instead. Goon Client doesn't see or store anything in that case.</p>
+			</section>
+
+			<section class="glass" id="stored">
+				<h2>What's stored on your computer</h2>
+				<p>Everything lives in Goon Client's own folder, <code>%APPDATA%\.goonclient</code>. Nothing is uploaded anywhere.</p>
+				<div class="table-scroll">
+					<table>
+						<thead>
+							<tr><th>File</th><th>What's in it</th></tr>
+						</thead>
+						<tbody>
+							<tr><td><code>account.json</code></td><td>Your Minecraft name, UUID and skin link, the Minecraft access token and the Microsoft refresh token that keeps you signed in. Never your password. Signing out deletes this file.</td></tr>
+							<tr><td><code>launcher.json</code></td><td>Launcher settings, such as how much RAM the game gets.</td></tr>
+							<tr><td><code>config/goonclient/</code></td><td>Which modules are on, their settings, HUD positions and your waypoints.</td></tr>
+							<tr><td><code>game-files/</code></td><td>Minecraft itself, its libraries and assets, downloaded from Mojang.</td></tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<section class="glass" id="services">
+				<h2>Which services it talks to</h2>
+				<p>The launcher only connects to these services, and only for the reason listed. Your sign-in tokens are only ever sent to the Microsoft, Xbox Live and Minecraft services.</p>
+				<div class="table-scroll">
+					<table>
+						<thead>
+							<tr><th>Service</th><th>Why</th></tr>
+						</thead>
+						<tbody>
+							<tr><td><code>login.microsoftonline.com</code></td><td>Microsoft sign-in.</td></tr>
+							<tr><td><code>user.auth.xboxlive.com</code><br><code>xsts.auth.xboxlive.com</code></td><td>Xbox Live sign-in, which Minecraft accounts use.</td></tr>
+							<tr><td><code>api.minecraftservices.com</code></td><td>Getting your Minecraft token and profile.</td></tr>
+							<tr><td><code>piston-meta.mojang.com</code><br><code>piston-data.mojang.com</code><br><code>libraries.minecraft.net</code><br><code>resources.download.minecraft.net</code></td><td>Downloading Minecraft, its libraries, assets and Java runtime from Mojang.</td></tr>
+							<tr><td><code>meta.fabricmc.net</code><br><code>maven.fabricmc.net</code></td><td>Downloading the Fabric mod loader.</td></tr>
+							<tr><td><code>cdn.modrinth.com</code></td><td>Downloading the mods in the pack from Modrinth.</td></tr>
+						</tbody>
+					</table>
+				</div>
+				<p>Once the game is running, Minecraft connects to Mojang and Microsoft services as it normally would (skins, multiplayer sign-in, Realms) and to the servers you choose to join. The Goon Client mod itself doesn't connect to anything.</p>
+			</section>
+
+			<section class="glass" id="website">
+				<h2>This website</h2>
+				<p>goonnation.xyz is a plain static site hosted on GitHub Pages. It has no cookies, no analytics and no third-party scripts, and its fonts are served from this site. The only thing it saves is the accent colour you pick, in your own browser. GitHub, as the host, may keep standard server logs; see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub's privacy statement</a>.</p>
+			</section>
+
+			<section class="glass" id="remove">
+				<h2>Signing out and removing access</h2>
+				<ul>
+					<li>Press <strong>Sign out</strong> in the launcher to delete the saved tokens from your computer.</li>
+					<li>To revoke Goon Client's access completely, remove it from your Microsoft account's app permissions at <a href="https://account.live.com/consent/Manage" target="_blank" rel="noopener">account.live.com/consent/Manage</a>.</li>
+					<li>To remove everything, delete the <code>%APPDATA%\.goonclient</code> folder and the launcher.</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+
+	<footer>
+		<div class="wrap">
+			<div class="foot">
+				<a class="brand" href="./">
+					<img src="assets/img/icon.png" alt="" width="34" height="34">
+					<span class="brand-name"><strong>GOON CLIENT</strong><span>by Goon Nation</span></span>
+				</a>
+				<nav class="foot-links" aria-label="Footer">
+					<a href="./#features">Features</a>
+					<a href="./#changelog">Changelog</a>
+					<a href="privacy.html">Privacy and sign-in</a>
+					<a href="./#download">Download</a>
+				</nav>
+			</div>
+			<p class="legal">&copy; <span data-year>2026</span> Goon Nation. NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT. Minecraft is a trademark of Mojang AB. Mods in the pack belong to their authors and are downloaded from Modrinth.</p>
+		</div>
+	</footer>
+
+	<script src="assets/js/site.js" defer></script>
+</body>
+</html>

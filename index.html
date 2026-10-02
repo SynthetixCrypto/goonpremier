@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Goon Client</title>
+	<meta name="description" content="Goon Client is a free PvE client for Minecraft Java 26.3 by Goon Nation: clean HUDs, waypoints, trackers, a glass ClickGUI and a tuned performance pack, installed in one click.">
+	<meta name="theme-color" content="#07090f">
+	<link rel="canonical" href="https://goonnation.xyz/">
+	<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png">
+	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Goon Nation">
+	<meta property="og:title" content="Goon Client: the PvE client for Minecraft 26.3">
+	<meta property="og:description" content="Clean HUDs, waypoints, trackers, a glass ClickGUI and a tuned performance pack. Free, installed in one click.">
+	<meta property="og:url" content="https://goonnation.xyz/">
+	<meta property="og:image" content="https://goonnation.xyz/assets/img/og.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<link rel="preload" href="assets/fonts/poppins-semibold.ttf" as="font" type="font/ttf" crossorigin>
+	<link rel="stylesheet" href="assets/css/site.css">
+	<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+	<a class="skip" href="#main">Skip to content</a>
+
+	<header class="nav" id="nav">
+		<div class="wrap nav-inner">
+			<a class="brand" href="#top" aria-label="Goon Client home">
+				<img src="assets/img/icon.png" alt="" width="34" height="34">
+				<span class="brand-name"><strong>GOON CLIENT</strong><span>by Goon Nation</span></span>
+			</a>
+			<ul class="nav-links" id="nav-links">
+				<li><a href="#features">Features</a></li>
+				<li><a href="#screenshots">Screenshots</a></li>
+				<li><a href="#launcher">Launcher</a></li>
+				<li><a href="#pack">Mod pack</a></li>
+				<li><a href="#changelog">Changelog</a></li>
+				<li><a href="#faq">FAQ</a></li>
+			</ul>
+			<a class="btn btn-primary" href="#download">Download</a>
+			<button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+			</button>
+		</div>
+	</header>
+
+	<main id="main">
+		<!-- Hero -->
+		<section class="hero" id="top">
+			<div class="hero-bg" aria-hidden="true"><img src="assets/img/hero-bg.jpg" alt="" width="960" height="540"></div>
+			<div class="wrap">
+				<span class="pill"><b>v<span data-version>0.1.0</span></b><span>Minecraft <span data-mc>26.3</span> &middot; Fabric</span></span>
+				<h1 class="wordmark"><span class="grad">GOON CLIENT</span></h1>
+				<p class="hero-sub">The PvE client for survival. Clean HUDs, waypoints, trackers and a tuned performance pack, all set up in one click.</p>
+				<div class="hero-cta" id="download">
+					<a class="btn btn-primary btn-big" href="download/GoonClient-Launcher-windows.zip" download>
+						<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5l7.5-1.05V11.5H3V5.5zm0 13l7.5 1.05V12.5H3v6zm8.5 1.2L21 21v-8.5h-9.5v7.2zm0-15.4v7.2H21V3l-9.5 1.3z"/></svg>
+						Download for Windows <span class="meta" data-size="launcher">28 MB</span>
+					</a>
+					<a class="btn btn-big" href="download/GoonClient.mrpack" download>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 7.5l-9-4.5-9 4.5 9 4.5 9-4.5z"/><path d="M3 7.5v9l9 4.5 9-4.5v-9M12 12v9"/></svg>
+						Get the .mrpack <span class="meta" data-size="mrpack">0.3 MB</span>
+					</a>
+				</div>
+				<p class="hero-note">Free. Needs Minecraft: Java Edition. The .mrpack works in the Modrinth App and Prism on any OS.</p>
+
+				<div class="hero-shot reveal">
+					<div class="frame glass">
+						<img src="assets/img/shot-menu-1600.webp" srcset="assets/img/shot-menu-800.webp 800w, assets/img/shot-menu-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Goon Client menu open in game: module categories on the left and glass module cards with toggles on the right" width="1600" height="900" fetchpriority="high">
+					</div>
+				</div>
+
+				<div class="stats">
+					<div class="stat glass reveal"><strong>27</strong><span>modules</span></div>
+					<div class="stat glass reveal"><strong>18</strong><span>mods in the pack</span></div>
+					<div class="stat glass reveal"><strong>1 click</strong><span>to install and play</span></div>
+					<div class="stat glass reveal"><strong>Free</strong><span>no ads, no tracking</span></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features -->
+		<section class="section" id="features">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<span class="eyebrow">Features</span>
+					<h2>Everything survival needs on screen</h2>
+					<p>Built for playing with friends on servers: the info you actually look at, laid out cleanly, and nothing that gets in the way.</p>
+				</div>
+
+				<div class="features">
+					<article class="feature glass reveal">
+						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg></div>
+						<h3>Glass ClickGUI</h3>
+						<p>Press <kbd>Right Shift</kbd> for every module in one place, with search, per-module settings and a blurred glass look.</p>
+					</article>
+					<article class="feature glass reveal">
+						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18M9 6l3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3M18 9l3 3-3 3"/></svg></div>
+						<h3>HUD editor</h3>
+						<p>Drag, snap, resize and hide any panel. Positions stay put at any resolution or GUI scale.</p>
+					</article>
+					<article class="feature glass reveal">
+						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+						<h3>Waypoints</h3>
+						<p>Save spots with <kbd>/wp</kbd>, see them on the compass strip, and get a death waypoint automatically so you can find your stuff.</p>
+					</article>
+					<article class="feature glass reveal">
+						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></div>
+						<h3>Mob Info</h3>
+						<p>Health, type, armour and distance of whatever you're looking at, so you know what you're fighting.</p>
+					</article>
+					<article class="feature glass reveal">
+						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l9 16H3l9-16z"/><path d="M12 10v4M12 17h.01"/></svg></div>
+						<h3>Danger Meter</h3>
+						<p>Warns you about low health, hunger, drowning, fire, poison and gear that's about to break.</p>
+					</article>
+					<article class="feature glass reveal">
+						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.6"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.6"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.6"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.6"/></svg></div>
+						<h3>Inventory at a glance</h3>
+						<p>Armour durability, potion timers, an item counter for arrows, totems, pearls and gapples, pickup popups and shulker box previews.</p>
+					</article>
+					<article class="feature glass reveal">
+						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg></div>
+						<h3>Zoom and Freelook</h3>
+						<p>Hold <kbd>C</kbd> to zoom and scroll to adjust. Hold <kbd>Left Alt</kbd> to look around without turning.</p>
+					</article>
+					<article class="feature glass reveal">
+						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></div>
+						<h3>World info</h3>
+						<p>Coordinates with Nether conversion, light level and spawn check, world time, mining and session stats, nearby entities.</p>
+					</article>
+					<article class="feature glass reveal">
+						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V7l4 4 4-6 4 6 4-4v10H4z"/></svg></div>
+						<h3>Quality of life</h3>
+						<p>Toggle Sprint, Fullbright, chat timestamps, a custom main menu and FPS, ping, clock and speed panels.</p>
+					</article>
+
+					<article class="feature feature-wide glass reveal">
+						<div>
+							<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.7-.8 1.7-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.8-1.7 1.7-1.7H16a5 5 0 0 0 5-5c0-4-4-7.2-9-7.2z"/><circle cx="7.5" cy="11.5" r="1"/><circle cx="10" cy="7.5" r="1"/><circle cx="15" cy="7.5" r="1"/></svg></div>
+							<h3>Make it yours</h3>
+							<p>Seven accent colours, adjustable blur and panel opacity. Try them here: this page uses the same presets as the client.</p>
+						</div>
+						<div class="swatches" role="group" aria-label="Accent colour">
+							<button class="swatch" style="--s1:#55d4ff;--s2:#a05cff" data-accent="Aqua" aria-pressed="true" aria-label="Aqua"></button>
+							<button class="swatch" style="--s1:#a98bff;--s2:#e07bff" data-accent="Violet" aria-pressed="false" aria-label="Violet"></button>
+							<button class="swatch" style="--s1:#4be3a0;--s2:#3fb7ff" data-accent="Emerald" aria-pressed="false" aria-label="Emerald"></button>
+							<button class="swatch" style="--s1:#ff5c7a;--s2:#ff9a4d" data-accent="Crimson" aria-pressed="false" aria-label="Crimson"></button>
+							<button class="swatch" style="--s1:#ff9f5a;--s2:#ff5c9e" data-accent="Sunset" aria-pressed="false" aria-label="Sunset"></button>
+							<button class="swatch" style="--s1:#ff7eb6;--s2:#b98bff" data-accent="Rose" aria-pressed="false" aria-label="Rose"></button>
+							<button class="swatch" style="--s1:#ffcb5c;--s2:#ff8a3d" data-accent="Gold" aria-pressed="false" aria-label="Gold"></button>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Screenshots -->
+		<section class="section" id="screenshots">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<span class="eyebrow">Screenshots</span>
+					<h2>See it in game</h2>
+					<p>Straight from the client, no edits.</p>
+				</div>
+
+				<div class="tabs glass reveal" role="tablist" aria-label="Screenshots">
+					<button class="tab" role="tab" id="tab-hud" aria-controls="viewer" aria-selected="true" data-shot="hud">In game</button>
+					<button class="tab" role="tab" id="tab-menu" aria-controls="viewer" aria-selected="false" data-shot="menu">ClickGUI</button>
+					<button class="tab" role="tab" id="tab-settings" aria-controls="viewer" aria-selected="false" data-shot="settings">Settings</button>
+					<button class="tab" role="tab" id="tab-editor" aria-controls="viewer" aria-selected="false" data-shot="editor">HUD editor</button>
+					<button class="tab" role="tab" id="tab-title" aria-controls="viewer" aria-selected="false" data-shot="title">Main menu</button>
+				</div>
+
+				<div class="viewer reveal" id="viewer" role="tabpanel" aria-labelledby="tab-hud">
+					<div class="frame glass">
+						<div class="stage">
+							<img class="active" data-shot="hud" src="assets/img/shot-hud-1600.webp" srcset="assets/img/shot-hud-800.webp 800w, assets/img/shot-hud-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="In game with the Goon Client HUD: coordinates, compass, Mob Info on a husk, potion timers, armour durability and an item counter" width="1600" height="900" loading="lazy">
+							<img data-shot="menu" src="assets/img/shot-menu-1600.webp" srcset="assets/img/shot-menu-800.webp 800w, assets/img/shot-menu-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Goon Client ClickGUI with module cards and toggles" width="1600" height="900" loading="lazy">
+							<img data-shot="settings" src="assets/img/shot-settings-1600.webp" srcset="assets/img/shot-settings-800.webp 800w, assets/img/shot-settings-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Zoom module's settings page with toggles and a zoom level slider" width="1600" height="900" loading="lazy">
+							<img data-shot="editor" src="assets/img/shot-editor-1600.webp" srcset="assets/img/shot-editor-800.webp 800w, assets/img/shot-editor-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The HUD editor showing every panel with outlines ready to drag" width="1600" height="900" loading="lazy">
+							<img data-shot="title" src="assets/img/shot-title-1600.webp" srcset="assets/img/shot-title-800.webp 800w, assets/img/shot-title-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Goon Client main menu over a blurred autumn panorama" width="1600" height="900" loading="lazy">
+						</div>
+					</div>
+					<p class="caption" id="caption" aria-live="polite"><strong>In game.</strong> Coordinates, the compass strip with waypoint markers, Mob Info on the husk you're looking at, potion timers, armour durability and the item counter.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Launcher -->
+		<section class="section" id="launcher">
+			<div class="wrap split">
+				<div class="launcher-shot reveal">
+					<img src="assets/img/launcher-home.webp" alt="The Goon Client Launcher home page with a big Play button and the What's new list" width="1000" height="620" loading="lazy">
+				</div>
+				<div class="reveal">
+					<span class="eyebrow">Launcher</span>
+					<h2>Press Play. That's the setup.</h2>
+					<p>The Goon Client Launcher gets Minecraft <span data-mc>26.3</span>, Fabric and the whole mod pack ready for you, then starts the game.</p>
+					<ul class="checks">
+						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>One click.</strong> Installs the game, Fabric, Goon Client and every mod in the pack.</span></li>
+						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Checked downloads.</strong> Every file is verified against its checksum, and Repair re-downloads anything broken.</span></li>
+						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Fast first launch.</strong> Reuses game files you already have from the Minecraft Launcher instead of downloading them again.</span></li>
+						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Its own folder.</strong> Goon Client lives in <code>.goonclient</code>, so your normal Minecraft worlds and settings are never touched.</span></li>
+					</ul>
+					<a class="btn btn-primary" href="download/GoonClient-Launcher-windows.zip" download>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+						Download the launcher
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Pack -->
+		<section class="section" id="pack">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<span class="eyebrow">Mod pack</span>
+					<h2>Fast, good-looking, and ready to go</h2>
+					<p>Goon Client ships with a hand-picked Fabric pack. Every mod is downloaded straight from Modrinth, so the authors get the credit and the downloads.</p>
+				</div>
+				<div class="pack">
+					<div class="pack-group glass reveal">
+						<h3>Performance</h3>
+						<ul>
+							<li><a href="https://modrinth.com/mod/sodium" target="_blank" rel="noopener">Sodium <span>rendering</span></a></li>
+							<li><a href="https://modrinth.com/mod/lithium" target="_blank" rel="noopener">Lithium <span>game logic</span></a></li>
+							<li><a href="https://modrinth.com/mod/ferrite-core" target="_blank" rel="noopener">FerriteCore <span>memory</span></a></li>
+							<li><a href="https://modrinth.com/mod/immediatelyfast" target="_blank" rel="noopener">ImmediatelyFast <span>UI and text</span></a></li>
+							<li><a href="https://modrinth.com/mod/entityculling" target="_blank" rel="noopener">EntityCulling <span>hidden mobs</span></a></li>
+							<li><a href="https://modrinth.com/mod/dynamic-fps" target="_blank" rel="noopener">Dynamic FPS <span>idle saving</span></a></li>
+							<li><a href="https://modrinth.com/mod/krypton" target="_blank" rel="noopener">Krypton <span>networking</span></a></li>
+						</ul>
+					</div>
+					<div class="pack-group glass reveal">
+						<h3>Graphics</h3>
+						<ul>
+							<li><a href="https://modrinth.com/mod/iris" target="_blank" rel="noopener">Iris <span>shaders</span></a></li>
+							<li><a href="https://modrinth.com/mod/sodium-extra" target="_blank" rel="noopener">Sodium Extra <span>more options</span></a></li>
+							<li><a href="https://modrinth.com/mod/reeses-sodium-options" target="_blank" rel="noopener">Reese's Sodium Options <span>settings UI</span></a></li>
+						</ul>
+					</div>
+					<div class="pack-group glass reveal">
+						<h3>Maps and building</h3>
+						<ul>
+							<li><a href="https://modrinth.com/mod/xaeros-minimap" target="_blank" rel="noopener">Xaero's Minimap <span>minimap</span></a></li>
+							<li><a href="https://modrinth.com/mod/xaeros-world-map" target="_blank" rel="noopener">Xaero's World Map <span>full map</span></a></li>
+							<li><a href="https://modrinth.com/mod/litematica" target="_blank" rel="noopener">Litematica <span>schematics</span></a></li>
+							<li><a href="https://modrinth.com/mod/malilib" target="_blank" rel="noopener">MaLiLib <span>library</span></a></li>
+						</ul>
+					</div>
+					<div class="pack-group glass reveal">
+						<h3>Core</h3>
+						<ul>
+							<li><a href="https://modrinth.com/mod/fabric-api" target="_blank" rel="noopener">Fabric API <span>library</span></a></li>
+							<li><a href="https://modrinth.com/mod/modmenu" target="_blank" rel="noopener">Mod Menu <span>mod list</span></a></li>
+							<li><a href="https://modrinth.com/mod/placeholder-api" target="_blank" rel="noopener">Placeholder API <span>library</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<p class="pack-note reveal">Shaders are included but off by default. Turn them on in Video Settings when you want them.</p>
+			</div>
+		</section>
+
+		<!-- Changelog -->
+		<section class="section" id="changelog">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<span class="eyebrow">Changelog</span>
+					<h2>What's new</h2>
+					<p>The same notes we post in Discord. <span class="legend">Green is new, yellow is changed.</span></p>
+				</div>
+				<article class="changelog glass reveal">
+<!-- changelog:start -->
+					<div class="changelog-head"><h3>Goon Client v0.1.0</h3><span>First release</span></div>
+					<p class="intro">PvE client for <strong>Minecraft 26.3</strong> (Fabric). Grab the launcher, or import the .mrpack into Modrinth/Prism.</p>
+					<h4>Client</h4>
+					<ul>
+						<li class="add">ClickGUI (Right Shift) with search, settings pages and a glass + blur look</li>
+						<li class="add">Custom main menu with a blurred panorama</li>
+						<li class="add">HUD editor: drag, snap, resize and hide anything</li>
+						<li class="add">Coordinates (+ Nether conversion), Compass with waypoint markers, FPS, Ping, Clock, Speed</li>
+						<li class="add">Mob Info: health, type, armour and distance of what you're looking at</li>
+						<li class="add">Danger Meter: low health, hunger, drowning, fire, poison, breaking gear</li>
+						<li class="add">Armor Status, Potion timers, Item Counter (arrows, totems, pearls, gapples)</li>
+						<li class="add">Pickup Notifier and shulker box preview</li>
+						<li class="add">Waypoints (/wp) + automatic death waypoints</li>
+						<li class="add">Light level + spawn check, Mining Stats, Session Stats, Nearby Entities</li>
+						<li class="add">Zoom (C), Freelook (Left Alt), Fullbright, Toggle Sprint, Chat Timestamps</li>
+						<li class="add">Interface settings: 7 accent colours, blur strength, panel opacity</li>
+					</ul>
+					<h4>Pack</h4>
+					<ul>
+						<li class="add">Sodium, Lithium, Iris shaders, EntityCulling, FerriteCore, ImmediatelyFast, Dynamic FPS</li>
+						<li class="add">Xaero's Minimap + World Map, Litematica</li>
+						<li class="add">Goon Client Launcher: installs, verifies and updates everything in one click</li>
+						<li class="add">Launcher starts the game itself with Microsoft sign-in (goes live once Mojang approves it; until then it opens the Minecraft Launcher)</li>
+					</ul>
+					<h4>Changes since the test build</h4>
+					<ul>
+						<li class="change">Renamed to Goon Client</li>
+						<li class="change">Whole UI redone: smooth font, anti-aliased corners, glass panels</li>
+						<li class="change">Fewer HUD panels on by default</li>
+						<li class="change">Sodium pinned to stable 0.9.2 (fixes the Reese's Sodium Options crash)</li>
+						<li class="change">HUD positions now stay put at any resolution or GUI scale</li>
+					</ul>
+<!-- changelog:end -->
+				</article>
+			</div>
+		</section>
+
+		<!-- Sign-in and privacy -->
+		<section class="section" id="privacy">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<span class="eyebrow">Sign-in and privacy</span>
+					<h2>Your account stays yours</h2>
+					<p>Goon Client is made by friends, for friends. It doesn't collect anything about you.</p>
+				</div>
+				<div class="trust">
+					<article class="feature glass reveal">
+						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16.5 6.5l3 3M14 9l2 2"/></svg></div>
+						<h3>Microsoft sign-in</h3>
+						<p>You sign in on Microsoft's own website with a short code. Goon Client never sees or stores your password.</p>
+					</article>
+					<article class="feature glass reveal">
+						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+						<h3>Stays on your PC</h3>
+						<p>Sign-in tokens are saved only on your computer and only ever sent to Microsoft, Xbox Live and Minecraft.</p>
+					</article>
+					<article class="feature glass reveal">
+						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 6.1c.5-.1.9-.1 1.4-.1 5 0 9 6 9 6a17 17 0 0 1-2.6 3.3M6.6 6.6C4.2 8.2 3 12 3 12s4 6 9 6c1.5 0 2.9-.5 4.1-1.2"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg></div>
+						<h3>No tracking</h3>
+						<p>No analytics, no ads, no telemetry, in the client, the launcher or this site. <a href="privacy.html">Read the details</a>.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ -->
+		<section class="section" id="faq">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<span class="eyebrow">FAQ</span>
+					<h2>Questions</h2>
+				</div>
+				<div class="faq">
+					<details class="glass reveal">
+						<summary>How do I install it?</summary>
+						<p>Download the launcher, unzip it anywhere and run <strong>Goon Client Launcher</strong>. Press Play: it installs everything and starts the game. If you'd rather use the Modrinth App or Prism Launcher, download the .mrpack and import it there instead.</p>
+					</details>
+					<details class="glass reveal">
+						<summary>Do I need to own Minecraft?</summary>
+						<p>Yes. Goon Client runs on Minecraft: Java Edition and you sign in with your own Microsoft account, the same one you use for the normal Minecraft Launcher.</p>
+					</details>
+					<details class="glass reveal">
+						<summary>Is it allowed on servers?</summary>
+						<p>Goon Client is made for survival quality of life, not for getting an edge in PvP. Still, every server has its own rules, and some don't allow things like minimaps or fullbright. Check your server's rules and turn off anything they don't allow.</p>
+					</details>
+					<details class="glass reveal">
+						<summary>Will it mess with my normal Minecraft?</summary>
+						<p>No. Goon Client keeps its own game folder, so your vanilla worlds, settings and resource packs stay exactly as they are.</p>
+					</details>
+					<details class="glass reveal">
+						<summary>Does it work on Mac or Linux?</summary>
+						<p>The launcher is Windows only for now. On Mac and Linux, import the .mrpack into the <a href="https://modrinth.com/app" target="_blank" rel="noopener">Modrinth App</a> or <a href="https://prismlauncher.org" target="_blank" rel="noopener">Prism Launcher</a> and you get the same client and mods.</p>
+					</details>
+					<details class="glass reveal">
+						<summary>Windows says the launcher is from an unknown publisher.</summary>
+						<p>The launcher isn't code-signed yet, so Windows SmartScreen may warn you the first time. Click <strong>More info</strong>, then <strong>Run anyway</strong>. Only download it from this site.</p>
+					</details>
+					<details class="glass reveal">
+						<summary>How do I open the menu in game?</summary>
+						<p>Press <kbd>Right Shift</kbd>. From there you can turn modules on and off, change their settings and open the HUD editor to move panels around.</p>
+					</details>
+				</div>
+			</div>
+		</section>
+
+		<!-- Final CTA -->
+		<section>
+			<div class="wrap">
+				<div class="cta glass reveal">
+					<h2>Ready to play?</h2>
+					<p>Grab the launcher and you'll be in game in a couple of minutes.</p>
+					<div class="hero-cta">
+						<a class="btn btn-primary btn-big" href="download/GoonClient-Launcher-windows.zip" download>
+							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5l7.5-1.05V11.5H3V5.5zm0 13l7.5 1.05V12.5H3v6zm8.5 1.2L21 21v-8.5h-9.5v7.2zm0-15.4v7.2H21V3l-9.5 1.3z"/></svg>
+							Download for Windows
+						</a>
+						<a class="btn btn-big" href="download/GoonClient.mrpack" download>Get the .mrpack</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="wrap">
+			<div class="foot">
+				<a class="brand" href="#top">
+					<img src="assets/img/icon.png" alt="" width="34" height="34">
+					<span class="brand-name"><strong>GOON CLIENT</strong><span>by Goon Nation</span></span>
+				</a>
+				<nav class="foot-links" aria-label="Footer">
+					<a href="#features">Features</a>
+					<a href="#changelog">Changelog</a>
+					<a href="privacy.html">Privacy and sign-in</a>
+					<a href="#download">Download</a>
+				</nav>
+			</div>
+			<p class="legal">&copy; <span data-year>2026</span> Goon Nation. NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT. Minecraft is a trademark of Mojang AB. Mods in the pack belong to their authors and are downloaded from Modrinth.</p>
+		</div>
+	</footer>
+
+	<script src="assets/js/site.js" defer></script>
+</body>
+</html>
