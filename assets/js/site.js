@@ -98,8 +98,40 @@
 		});
 	});
 
-	// ---------- Accent presets (same as the client's Interface module) ----------
+	// ---------- Accent presets (same as the client's Interface module); screenshots follow along ----------
 	var swatches = Array.prototype.slice.call(document.querySelectorAll(".swatch"));
+
+	// Every client screenshot exists once per accent: shot-menu-1600.webp (Mint), shot-menu-sky-1600.webp, ...
+	function shotFile(key, accent, size) {
+		var suffix = accent && accent !== "Mint" ? "-" + accent.toLowerCase() : "";
+		return "assets/img/shot-" + key + suffix + "-" + size + ".webp";
+	}
+
+	function showShots(accent) {
+		document.querySelectorAll("img[data-shot], img[data-accent-shot]").forEach(function (img) {
+			var key = img.getAttribute("data-shot") || img.getAttribute("data-accent-shot");
+			var src = shotFile(key, accent, 1600);
+			var srcset = shotFile(key, accent, 800) + " 800w, " + src + " 1600w";
+			if (img.getAttribute("src") === src) {
+				return;
+			}
+			var visible = img.classList.contains("active") || img.hasAttribute("data-accent-shot");
+			if (!visible) {
+				img.srcset = srcset;
+				img.src = src;
+				return;
+			}
+			// Load the new picture first so the visible one never goes blank
+			var next = new Image();
+			next.sizes = img.sizes;
+			next.onload = function () {
+				img.srcset = srcset;
+				img.src = src;
+			};
+			next.srcset = srcset;
+			next.src = src;
+		});
+	}
 
 	function applyAccent(swatch) {
 		var style = swatch.style;
@@ -108,6 +140,7 @@
 		swatches.forEach(function (s) {
 			s.setAttribute("aria-pressed", s === swatch ? "true" : "false");
 		});
+		showShots(swatch.getAttribute("data-accent"));
 	}
 
 	swatches.forEach(function (swatch) {
