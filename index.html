@@ -49,7 +49,7 @@
 		<section class="hero" id="top">
 			<div class="hero-bg" aria-hidden="true"><img src="assets/img/hero-bg.jpg" alt="" width="960" height="540"></div>
 			<div class="wrap">
-				<span class="pill"><b>v<span data-version>0.5.0</span></b><span>Minecraft <span data-mc>26.3</span> &middot; Fabric</span></span>
+				<span class="pill"><b>v<span data-version>0.5.1</span></b><span>Minecraft <span data-mc>26.3</span> &middot; Fabric</span></span>
 				<h1 class="wordmark"><span class="grad">GOON CLIENT</span></h1>
 				<p class="hero-sub">The PvE client for survival. Clean HUDs, waypoints, trackers and a tuned performance pack, all set up in one click.</p>
 				<div class="hero-cta" id="download">
@@ -185,6 +185,7 @@
 					<button class="tab" role="tab" id="tab-menu" aria-controls="viewer" aria-selected="false" data-shot="menu">ClickGUI</button>
 					<button class="tab" role="tab" id="tab-settings" aria-controls="viewer" aria-selected="false" data-shot="settings">Settings</button>
 					<button class="tab" role="tab" id="tab-editor" aria-controls="viewer" aria-selected="false" data-shot="editor">HUD editor</button>
+					<button class="tab" role="tab" id="tab-minimap" aria-controls="viewer" aria-selected="false" data-shot="minimap-settings">Minimap</button>
 					<button class="tab" role="tab" id="tab-overlays" aria-controls="viewer" aria-selected="false" data-shot="overlays">Overlays</button>
 					<button class="tab" role="tab" id="tab-log" aria-controls="viewer" aria-selected="false" data-shot="log">Adventure Log</button>
 					<button class="tab" role="tab" id="tab-pause" aria-controls="viewer" aria-selected="false" data-shot="pause">Pause menu</button>
@@ -202,6 +203,7 @@
 							<img data-shot="menu" src="assets/img/shot-menu-1600.webp" srcset="assets/img/shot-menu-800.webp 800w, assets/img/shot-menu-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Goon Client ClickGUI with module cards and toggles" width="1600" height="900" loading="lazy">
 							<img data-shot="settings" src="assets/img/shot-settings-1600.webp" srcset="assets/img/shot-settings-800.webp 800w, assets/img/shot-settings-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Custom Crosshair settings page with styles, colours and size sliders" width="1600" height="900" loading="lazy">
 							<img data-shot="editor" src="assets/img/shot-editor-1600.webp" srcset="assets/img/shot-editor-800.webp 800w, assets/img/shot-editor-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The HUD editor showing every panel with outlines ready to drag" width="1600" height="900" loading="lazy">
+							<img data-shot="minimap-settings" src="assets/img/shot-minimap-settings-1600.webp" srcset="assets/img/shot-minimap-settings-800.webp 800w, assets/img/shot-minimap-settings-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The integrated Minimap module in Goon ClickGUI with visibility, scale, native settings, placement reset and HUD editing controls" width="1600" height="900" loading="lazy">
 							<img data-shot="overlays" src="assets/img/shot-overlays-1600.webp" srcset="assets/img/shot-overlays-800.webp 800w, assets/img/shot-overlays-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="Night time with the Spawn Overlay marking spawnable blocks in red, chunk borders and spawn range rings" width="1600" height="900" loading="lazy">
 							<img data-shot="log" src="assets/img/shot-log-1600.webp" srcset="assets/img/shot-log-800.webp 800w, assets/img/shot-log-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Adventure Log screen listing a death, a boss kill, rare finds, an advancement and a trip to the Nether" width="1600" height="900" loading="lazy">
 							<img data-shot="pause" src="assets/img/shot-pause-1600.webp" srcset="assets/img/shot-pause-800.webp 800w, assets/img/shot-pause-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Goon Client pause menu over the blurred game, with a two-column button layout and a This session stats card" width="1600" height="900" loading="lazy">
@@ -317,25 +319,21 @@
 				</div>
 				<article class="changelog glass reveal">
 <!-- changelog:start -->
-					<div class="changelog-head"><h3>Goon Client v0.5.0</h3><span>Make it yours</span></div>
+					<div class="changelog-head"><h3>Goon Client v0.5.1</h3><span>Minimap meets the HUD</span></div>
 					<p class="intro">PvE client for <strong>Minecraft 26.3</strong> (Fabric). Update through the launcher, or grab the new .mrpack.</p>
 					<h4>New</h4>
 					<ul>
-						<li class="add">Goon Options: a Graphite + Mint options hub with a field-of-view slider, keyboard navigation and all your game settings in one place</li>
-						<li class="add">Low-resource preset: lighter view distance, effects and menus in one click, with your previous settings saved for Restore</li>
-						<li class="add">Screenshot manager: browse and preview your captures, open images, copy paths and remove with undo, from the main or pause menu</li>
-						<li class="add">Hardware Usage HUD: system CPU, game CPU and GPU frame load, sampled without opening F3</li>
-						<li class="add">Item Physics: dropped items settle on the ground and tumble while falling (cosmetic, off by default)</li>
-						<li class="add">Time Changer: local day, sunrise, sunset, night or custom time, while the real server clock and gameplay stay untouched (off by default)</li>
+						<li class="add">Minimap module in the ClickGUI: enable, resize, reset placement and open Xaero's map, radar and waypoint settings</li>
+						<li class="add">Live minimap in Edit HUD: drag to move, scroll to resize, right-click to hide and restore it from Elements</li>
 					</ul>
 					<h4>Changed</h4>
 					<ul>
-						<li class="change">Removed the first-run narrator welcome screen; accessibility controls are still in Options</li>
-						<li class="change">Added a solid charcoal menu background for low-resource setups</li>
-						<li class="change">Screenshot removal moves files to screenshots/.goon-trash instead of permanently deleting them</li>
-						<li class="change">Improved font-atlas lifetime handling and automated screenshot capture timing</li>
+						<li class="change">HUD layout now reserves the minimap's measured size and native information labels instead of guessing a gap</li>
+						<li class="change">Crowded HUD columns can spill sideways and clear the hotbar instead of jumping over the map</li>
+						<li class="change">Xaero's visibility controls and Goon's Minimap switch stay synchronized</li>
+						<li class="change">Enlarged maps follow the same HUD anchor; position and scale are saved with your Goon layout</li>
 					</ul>
-					<p class="intro">Includes 0.4.0's Boss Prep, FPS Graph, Better Chat, HUD auto-stacking, custom menu backgrounds and launcher auto-update.</p>
+					<p class="intro">Includes 0.5.0's Goon Options, low-resource preset, screenshot manager, Hardware Usage, Item Physics and Time Changer.</p>
 <!-- changelog:end -->
 				</article>
 			</div>

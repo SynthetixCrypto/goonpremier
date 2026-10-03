@@ -49,6 +49,7 @@
 		menu: "<strong>ClickGUI.</strong> Press Right Shift for every module, sorted into categories with search and a count of what's on.",
 		settings: "<strong>Settings.</strong> Every module has its own page of toggles and sliders, like the Custom Crosshair's style, size, spacing and colour.",
 		editor: "<strong>HUD editor.</strong> Drag panels anywhere, scroll to resize and right-click to hide. Panels you leave alone make room for each other.",
+		"minimap-settings": "<strong>Minimap.</strong> Xaero's map is part of your Goon HUD: move, resize or hide it in the editor, open map and radar settings here, and let nearby panels make room.",
 		overlays: "<strong>Overlays.</strong> At night the Spawn Overlay marks every block a mob could spawn on, with chunk borders and spawn range rings for farm planning.",
 		log: "<strong>Adventure Log.</strong> Press J for everything that happened in this world: deaths and what killed you, bosses, rare finds, advancements and trips.",
 		pause: "<strong>Pause menu.</strong> Back to the game, Goon Client, your Adventure Log and the usual options, plus what you've done this session.",
