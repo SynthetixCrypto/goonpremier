@@ -47,12 +47,15 @@
 		hud: "<strong>In game.</strong> Mob Info beside the crosshair, a health bar and damage number over the husk, potion timers, armour, the Loot Tracker and shield status.",
 		tools: "<strong>Boss Prep.</strong> A checklist before the Wither, the Warden or a raid: armour, weapon, food, healing, totems, arrows, blocks and space, with the FPS graph above.",
 		menu: "<strong>ClickGUI.</strong> Press Right Shift for every module, sorted into categories with search and a count of what's on.",
-		settings: "<strong>Settings.</strong> Every module has its own page of toggles and sliders, like Zoom's level, scroll and smoothing options.",
+		settings: "<strong>Settings.</strong> Every module has its own page of toggles and sliders, like the Custom Crosshair's style, size, spacing and colour.",
 		editor: "<strong>HUD editor.</strong> Drag panels anywhere, scroll to resize and right-click to hide. Panels you leave alone make room for each other.",
 		overlays: "<strong>Overlays.</strong> At night the Spawn Overlay marks every block a mob could spawn on, with chunk borders and spawn range rings for farm planning.",
 		log: "<strong>Adventure Log.</strong> Press J for everything that happened in this world: deaths and what killed you, bosses, rare finds, advancements and trips.",
 		pause: "<strong>Pause menu.</strong> Back to the game, Goon Client, your Adventure Log and the usual options, plus what you've done this session.",
-		title: "<strong>Main menu.</strong> Buttons that slide in over the animated Goon background (or your own picture), with a What's new card straight from the changelog."
+		title: "<strong>Main menu.</strong> Buttons that slide in over the animated Goon background (or your own picture), with a What's new card straight from the changelog.",
+		options: "<strong>Goon Options.</strong> A custom settings hub with a field-of-view slider and quick access to game settings, modules and the low-resource preset. Fresh installs skip the narrator welcome screen.",
+		performance: "<strong>Low-resource preset.</strong> Reduce view distance, effects and menu overhead in one click. Your previous settings are saved so you can restore them even after a restart.",
+		screenshots: "<strong>Screenshots.</strong> Browse your captures, click for a large preview, open images or copy their paths. Removed images go into a recovery folder, with undo in the gallery."
 	};
 	var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
 	var viewer = document.getElementById("viewer");

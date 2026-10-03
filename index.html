@@ -49,17 +49,17 @@
 		<section class="hero" id="top">
 			<div class="hero-bg" aria-hidden="true"><img src="assets/img/hero-bg.jpg" alt="" width="960" height="540"></div>
 			<div class="wrap">
-				<span class="pill"><b>v<span data-version>0.4.0</span></b><span>Minecraft <span data-mc>26.3</span> &middot; Fabric</span></span>
+				<span class="pill"><b>v<span data-version>0.5.0</span></b><span>Minecraft <span data-mc>26.3</span> &middot; Fabric</span></span>
 				<h1 class="wordmark"><span class="grad">GOON CLIENT</span></h1>
 				<p class="hero-sub">The PvE client for survival. Clean HUDs, waypoints, trackers and a tuned performance pack, all set up in one click.</p>
 				<div class="hero-cta" id="download">
 					<a class="btn btn-primary btn-big" href="download/GoonClient-Launcher-windows.zip" download>
 						<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5l7.5-1.05V11.5H3V5.5zm0 13l7.5 1.05V12.5H3v6zm8.5 1.2L21 21v-8.5h-9.5v7.2zm0-15.4v7.2H21V3l-9.5 1.3z"/></svg>
-						Download for Windows <span class="meta" data-size="launcher">28 MB</span>
+						Download for Windows <span class="meta" data-size="launcher">29 MB</span>
 					</a>
 					<a class="btn btn-big" href="download/GoonClient.mrpack" download>
 						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 7.5l-9-4.5-9 4.5 9 4.5 9-4.5z"/><path d="M3 7.5v9l9 4.5 9-4.5v-9M12 12v9"/></svg>
-						Get the .mrpack <span class="meta" data-size="mrpack">0.4 MB</span>
+						Get the .mrpack <span class="meta" data-size="mrpack">0.5 MB</span>
 					</a>
 				</div>
 				<p class="hero-note">Free. Needs Minecraft: Java Edition. The .mrpack works in the Modrinth App and Prism on any OS.</p>
@@ -71,7 +71,7 @@
 				</div>
 
 				<div class="stats">
-					<div class="stat glass reveal"><strong>38</strong><span>modules</span></div>
+					<div class="stat glass reveal"><strong>44</strong><span>modules</span></div>
 					<div class="stat glass reveal"><strong data-mods>24</strong><span>mods in the pack</span></div>
 					<div class="stat glass reveal"><strong>1 click</strong><span>to install and play</span></div>
 					<div class="stat glass reveal"><strong>Free</strong><span>no ads, no tracking</span></div>
@@ -147,7 +147,7 @@
 					<article class="feature glass reveal">
 						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></div>
 						<h3>World info and quality of life</h3>
-						<p>Coordinates with Nether conversion, an FPS graph, light level, world time, mining and session stats, Toggle Sprint and Sneak, Fullbright.</p>
+						<p>Coordinates, an FPS graph, CPU and GPU frame readings, a low-resource preset with restore, a screenshot gallery, item physics and a local time changer.</p>
 					</article>
 
 					<article class="feature feature-wide glass reveal">
@@ -189,6 +189,9 @@
 					<button class="tab" role="tab" id="tab-log" aria-controls="viewer" aria-selected="false" data-shot="log">Adventure Log</button>
 					<button class="tab" role="tab" id="tab-pause" aria-controls="viewer" aria-selected="false" data-shot="pause">Pause menu</button>
 					<button class="tab" role="tab" id="tab-title" aria-controls="viewer" aria-selected="false" data-shot="title">Main menu</button>
+					<button class="tab" role="tab" id="tab-options" aria-controls="viewer" aria-selected="false" data-shot="options">Options</button>
+					<button class="tab" role="tab" id="tab-performance" aria-controls="viewer" aria-selected="false" data-shot="performance">Low-resource preset</button>
+					<button class="tab" role="tab" id="tab-screenshots" aria-controls="viewer" aria-selected="false" data-shot="screenshots">Screenshots</button>
 				</div>
 
 				<div class="viewer reveal" id="viewer" role="tabpanel" aria-labelledby="tab-hud">
@@ -197,12 +200,15 @@
 							<img class="active" data-shot="hud" src="assets/img/shot-hud-1600.webp" srcset="assets/img/shot-hud-800.webp 800w, assets/img/shot-hud-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="In game with the Goon Client HUD: coordinates, compass, Mob Info, a health bar and damage number over a husk, potion timers, armour, the Loot Tracker and shield status" width="1600" height="900" loading="lazy">
 							<img data-shot="tools" src="assets/img/shot-tools-1600.webp" srcset="assets/img/shot-tools-800.webp 800w, assets/img/shot-tools-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Boss Prep checklist rating armour, weapon, food, healing, totems, arrows, blocks and free slots, under the FPS graph" width="1600" height="900" loading="lazy">
 							<img data-shot="menu" src="assets/img/shot-menu-1600.webp" srcset="assets/img/shot-menu-800.webp 800w, assets/img/shot-menu-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Goon Client ClickGUI with module cards and toggles" width="1600" height="900" loading="lazy">
-							<img data-shot="settings" src="assets/img/shot-settings-1600.webp" srcset="assets/img/shot-settings-800.webp 800w, assets/img/shot-settings-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Zoom module's settings page with toggles and a zoom level slider" width="1600" height="900" loading="lazy">
+							<img data-shot="settings" src="assets/img/shot-settings-1600.webp" srcset="assets/img/shot-settings-800.webp 800w, assets/img/shot-settings-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Custom Crosshair settings page with styles, colours and size sliders" width="1600" height="900" loading="lazy">
 							<img data-shot="editor" src="assets/img/shot-editor-1600.webp" srcset="assets/img/shot-editor-800.webp 800w, assets/img/shot-editor-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The HUD editor showing every panel with outlines ready to drag" width="1600" height="900" loading="lazy">
 							<img data-shot="overlays" src="assets/img/shot-overlays-1600.webp" srcset="assets/img/shot-overlays-800.webp 800w, assets/img/shot-overlays-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="Night time with the Spawn Overlay marking spawnable blocks in red, chunk borders and spawn range rings" width="1600" height="900" loading="lazy">
 							<img data-shot="log" src="assets/img/shot-log-1600.webp" srcset="assets/img/shot-log-800.webp 800w, assets/img/shot-log-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Adventure Log screen listing a death, a boss kill, rare finds, an advancement and a trip to the Nether" width="1600" height="900" loading="lazy">
 							<img data-shot="pause" src="assets/img/shot-pause-1600.webp" srcset="assets/img/shot-pause-800.webp 800w, assets/img/shot-pause-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Goon Client pause menu over the blurred game, with a two-column button layout and a This session stats card" width="1600" height="900" loading="lazy">
 							<img data-shot="title" src="assets/img/shot-title-1600.webp" srcset="assets/img/shot-title-800.webp 800w, assets/img/shot-title-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Goon Client main menu with its button column, a What's new card and the account card over the animated Goon background" width="1600" height="900" loading="lazy">
+							<img data-shot="options" src="assets/img/shot-options-1600.webp" srcset="assets/img/shot-options-800.webp 800w, assets/img/shot-options-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The custom Goon Options hub with settings cards and a field-of-view slider" width="1600" height="900" loading="lazy">
+							<img data-shot="performance" src="assets/img/shot-performance-1600.webp" srcset="assets/img/shot-performance-800.webp 800w, assets/img/shot-performance-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The low-resource preset showing its changes and Apply, Restore previous and Done buttons" width="1600" height="900" loading="lazy">
+							<img data-shot="screenshots" src="assets/img/shot-screenshots-1600.webp" srcset="assets/img/shot-screenshots-800.webp 800w, assets/img/shot-screenshots-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The screenshot manager displaying six recent captures with preview, folder and paging controls" width="1600" height="900" loading="lazy">
 						</div>
 					</div>
 					<p class="caption" id="caption" aria-live="polite"><strong>In game.</strong> Mob Info beside the crosshair, a health bar and damage number over the husk, potion timers, armour, the Loot Tracker and shield status.</p>
@@ -311,22 +317,25 @@
 				</div>
 				<article class="changelog glass reveal">
 <!-- changelog:start -->
-					<div class="changelog-head"><h3>Goon Client v0.4.0</h3><span>Boss Prep</span></div>
+					<div class="changelog-head"><h3>Goon Client v0.5.0</h3><span>Make it yours</span></div>
 					<p class="intro">PvE client for <strong>Minecraft 26.3</strong> (Fabric). Update through the launcher, or grab the new .mrpack.</p>
 					<h4>New</h4>
 					<ul>
-						<li class="add">Boss Prep: a pre-fight checklist for armour, weapon, food, healing, totems, arrows, blocks and free slots</li>
-						<li class="add">FPS Graph: live frame-time graph with average, 1% low and your worst frame, so stutters stand out</li>
-						<li class="add">Menu backgrounds: an animated Goon background, or your own picture (Interface &gt; Menu background)</li>
-						<li class="add">Better Chat: repeated messages stack into one line with a counter, and chat keeps 1000 messages</li>
-						<li class="add">Launcher auto-update: new versions download by themselves when you open the launcher (grab this launcher once)</li>
+						<li class="add">Goon Options: a Graphite + Mint options hub with a field-of-view slider, keyboard navigation and all your game settings in one place</li>
+						<li class="add">Low-resource preset: lighter view distance, effects and menus in one click, with your previous settings saved for Restore</li>
+						<li class="add">Screenshot manager: browse and preview your captures, open images, copy paths and remove with undo, from the main or pause menu</li>
+						<li class="add">Hardware Usage HUD: system CPU, game CPU and GPU frame load, sampled without opening F3</li>
+						<li class="add">Item Physics: dropped items settle on the ground and tumble while falling (cosmetic, off by default)</li>
+						<li class="add">Time Changer: local day, sunrise, sunset, night or custom time, while the real server clock and gameplay stay untouched (off by default)</li>
 					</ul>
 					<h4>Changed</h4>
 					<ul>
-						<li class="change">HUD panels you haven't moved make room for each other instead of overlapping, at any GUI scale</li>
-						<li class="change">Pop-ups like Mob Info and pickups slide out of the way of your other panels</li>
-						<li class="change">Only panels you've moved are saved, so better default spots reach you in updates</li>
+						<li class="change">Removed the first-run narrator welcome screen; accessibility controls are still in Options</li>
+						<li class="change">Added a solid charcoal menu background for low-resource setups</li>
+						<li class="change">Screenshot removal moves files to screenshots/.goon-trash instead of permanently deleting them</li>
+						<li class="change">Improved font-atlas lifetime handling and automated screenshot capture timing</li>
 					</ul>
+					<p class="intro">Includes 0.4.0's Boss Prep, FPS Graph, Better Chat, HUD auto-stacking, custom menu backgrounds and launcher auto-update.</p>
 <!-- changelog:end -->
 				</article>
 			</div>
