@@ -1,4 +1,4 @@
-// Goon Client site: nav, screenshot tabs, accent presets and scroll reveals. No tracking, no dependencies.
+// Goon Client site: nav, screenshot tabs, themes and scroll reveals. No tracking, no dependencies.
 (function () {
 	"use strict";
 
@@ -44,19 +44,16 @@
 
 	// ---------- Screenshot tabs ----------
 	var captions = {
-		hud: "<strong>In game.</strong> Mob Info beside the crosshair, a health bar and damage number over the husk, potion timers, armour, the Loot Tracker and shield status.",
-		tools: "<strong>Boss Prep.</strong> A checklist before the Wither, the Warden or a raid: armour, weapon, food, healing, totems, arrows, blocks and space, with the FPS graph above.",
-		menu: "<strong>ClickGUI.</strong> Press Right Shift for every module, sorted into categories with search and a count of what's on.",
-		settings: "<strong>Settings.</strong> Every module has its own page of toggles and sliders, like the Custom Crosshair's style, size, spacing and colour.",
-		editor: "<strong>HUD editor.</strong> Drag panels anywhere, scroll to resize and right-click to hide. Panels you leave alone make room for each other.",
-		"minimap-settings": "<strong>Minimap.</strong> Xaero's map is part of your Goon HUD: move, resize or hide it in the editor, open map and radar settings here, and let nearby panels make room.",
-		overlays: "<strong>Overlays.</strong> At night the Spawn Overlay marks every block a mob could spawn on, with chunk borders and spawn range rings for farm planning.",
-		log: "<strong>Adventure Log.</strong> Press J for everything that happened in this world: deaths and what killed you, bosses, rare finds, advancements and trips.",
+		hud: "<strong>In game.</strong> FPS and memory pills, Potions, Keybinds, Cooldowns and Inventory panels, a target card under the crosshair and the glass hotbar.",
+		menu: "<strong>ClickGUI.</strong> Press Right Shift for six frosted columns of modules. Left-click toggles, right-click opens settings, Ctrl+F searches.",
+		settings: "<strong>Settings.</strong> The HUD page: a card with a switch for every element, next to pages for the interface, themes and saved setups.",
+		module: "<strong>Module settings.</strong> Every module has its own panel of switches, sliders and option lists, with its shortcut key at the top.",
+		editor: "<strong>HUD editor.</strong> Drag panels anywhere and scroll to resize. Select one and all its settings sit right beside it.",
+		configs: "<strong>Configs.</strong> Save your setup, load a built-in one like Combatant, Survival, Builder or Boss run, and undo if you change your mind.",
+		title: "<strong>Main menu.</strong> The Goon mark, glass buttons over the animated background (or your own picture) and a What's new card from the changelog.",
 		pause: "<strong>Pause menu.</strong> Back to the game, Goon Client, your Adventure Log and the usual options, plus what you've done this session.",
-		title: "<strong>Main menu.</strong> Buttons that slide in over the animated Goon background (or your own picture), with a What's new card straight from the changelog.",
-		options: "<strong>Goon Options.</strong> A custom settings hub with a field-of-view slider and quick access to game settings, modules and the low-resource preset. Fresh installs skip the narrator welcome screen.",
-		performance: "<strong>Low-resource preset.</strong> Reduce view distance, effects and menu overhead in one click. Your previous settings are saved so you can restore them even after a restart.",
-		screenshots: "<strong>Screenshots.</strong> Browse your captures, click for a large preview, open images or copy their paths. Removed images go into a recovery folder, with undo in the gallery."
+		log: "<strong>Adventure Log.</strong> Press J for everything that happened in this world: deaths and what killed you, bosses, rare finds, advancements and trips.",
+		options: "<strong>Goon Options.</strong> A settings hub with cards for every page, a field-of-view slider and the low-resource preset."
 	};
 	var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
 	var viewer = document.getElementById("viewer");
@@ -102,24 +99,24 @@
 		});
 	});
 
-	// ---------- Accent presets (same as the client's Interface module); screenshots follow along ----------
+	// ---------- Themes (the client's sixteen); themed screenshots follow along ----------
 	var swatches = Array.prototype.slice.call(document.querySelectorAll(".swatch"));
 
-	// Every client screenshot exists once per accent: shot-menu-1600.webp (Mint), shot-menu-sky-1600.webp, ...
-	function shotFile(key, accent, size) {
-		var suffix = accent && accent !== "Mint" ? "-" + accent.toLowerCase() : "";
+	// Themed screenshots exist once per theme: shot-hud-1600.webp (Noir), shot-hud-mint-1600.webp, ...
+	function shotFile(key, theme, size) {
+		var suffix = theme && theme !== "Noir" ? "-" + theme.toLowerCase() : "";
 		return "assets/img/shot-" + key + suffix + "-" + size + ".webp";
 	}
 
-	function showShots(accent) {
-		document.querySelectorAll("img[data-shot], img[data-accent-shot]").forEach(function (img) {
-			var key = img.getAttribute("data-shot") || img.getAttribute("data-accent-shot");
-			var src = shotFile(key, accent, 1600);
-			var srcset = shotFile(key, accent, 800) + " 800w, " + src + " 1600w";
+	function showShots(theme) {
+		document.querySelectorAll("img[data-themed], img[data-theme-shot]").forEach(function (img) {
+			var key = img.getAttribute("data-theme-shot") || img.getAttribute("data-shot");
+			var src = shotFile(key, theme, 1600);
+			var srcset = shotFile(key, theme, 800) + " 800w, " + src + " 1600w";
 			if (img.getAttribute("src") === src) {
 				return;
 			}
-			var visible = img.classList.contains("active") || img.hasAttribute("data-accent-shot");
+			var visible = img.classList.contains("active") || img.hasAttribute("data-theme-shot");
 			if (!visible) {
 				img.srcset = srcset;
 				img.src = src;
@@ -137,28 +134,40 @@
 		});
 	}
 
-	function applyAccent(swatch) {
+	// Light accents (White, Mint, Classic...) get dark text on accent buttons
+	function onAccent(hex) {
+		var c = hex.trim().replace("#", "");
+		var channel = function (i) {
+			var v = parseInt(c.substr(i, 2), 16) / 255;
+			return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+		};
+		var luminance = 0.2126 * channel(0) + 0.7152 * channel(2) + 0.0722 * channel(4);
+		return luminance > 0.32 ? "#101114" : "#fff";
+	}
+
+	function applyTheme(swatch) {
 		var style = swatch.style;
 		root.style.setProperty("--a1", style.getPropertyValue("--s1"));
 		root.style.setProperty("--a2", style.getPropertyValue("--s2"));
+		root.style.setProperty("--on-accent", onAccent(style.getPropertyValue("--s1")));
 		swatches.forEach(function (s) {
 			s.setAttribute("aria-pressed", s === swatch ? "true" : "false");
 		});
-		showShots(swatch.getAttribute("data-accent"));
+		showShots(swatch.getAttribute("data-theme"));
 	}
 
 	swatches.forEach(function (swatch) {
 		swatch.addEventListener("click", function () {
-			applyAccent(swatch);
-			store("goon-accent", swatch.getAttribute("data-accent"));
+			applyTheme(swatch);
+			store("goon-theme", swatch.getAttribute("data-theme"));
 		});
 	});
 
-	var saved = store("goon-accent");
+	var saved = store("goon-theme");
 	if (saved) {
 		swatches.forEach(function (swatch) {
-			if (swatch.getAttribute("data-accent") === saved) {
-				applyAccent(swatch);
+			if (swatch.getAttribute("data-theme") === saved) {
+				applyTheme(swatch);
 			}
 		});
 	}

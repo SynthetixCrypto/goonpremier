@@ -4,19 +4,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Goon Client</title>
-	<meta name="description" content="Goon Client is a free PvE client for Minecraft Java 26.3 by Goon Nation: clean HUDs, waypoints, trackers, a glass ClickGUI and a tuned performance pack, installed in one click.">
-	<meta name="theme-color" content="#07090f">
+	<meta name="description" content="Goon Client is a free, open-source PvE client for Minecraft Java 26.3 by Goon Nation: a frosted-glass HUD, sixteen themes, waypoints, trackers and a tuned mod pack, installed in one click.">
+	<meta name="theme-color" content="#08090c">
 	<link rel="canonical" href="https://goonnation.xyz/">
+	<link rel="icon" type="image/svg+xml" href="assets/img/mark.svg">
 	<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png">
 	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="Goon Nation">
 	<meta property="og:title" content="Goon Client: the PvE client for Minecraft 26.3">
-	<meta property="og:description" content="Clean HUDs, waypoints, trackers, a glass ClickGUI and a tuned performance pack. Free, installed in one click.">
+	<meta property="og:description" content="A frosted-glass HUD, sixteen themes, waypoints, trackers and a tuned mod pack. Free, open source, installed in one click.">
 	<meta property="og:url" content="https://goonnation.xyz/">
 	<meta property="og:image" content="https://goonnation.xyz/assets/img/og.jpg">
 	<meta name="twitter:card" content="summary_large_image">
-	<link rel="preload" href="assets/fonts/poppins-semibold.ttf" as="font" type="font/ttf" crossorigin>
+	<link rel="preload" href="assets/fonts/inter-bold.ttf" as="font" type="font/ttf" crossorigin>
 	<link rel="stylesheet" href="assets/css/site.css">
 	<script>document.documentElement.classList.add("js")</script>
 </head>
@@ -26,14 +27,16 @@
 	<header class="nav" id="nav">
 		<div class="wrap nav-inner">
 			<a class="brand" href="#top" aria-label="Goon Client home">
-				<img src="assets/img/icon.png" alt="" width="34" height="34">
-				<span class="brand-name"><strong>GOON CLIENT</strong><span>by Goon Nation</span></span>
+				<img src="assets/img/mark.svg" alt="" width="36" height="36">
+				<span class="wordmark">GOON <em>CLIENT</em></span>
 			</a>
 			<ul class="nav-links" id="nav-links">
+				<li><a href="#hud">HUD</a></li>
 				<li><a href="#features">Features</a></li>
+				<li><a href="#themes">Themes</a></li>
 				<li><a href="#screenshots">Screenshots</a></li>
+				<li><a href="#wardrobe">Wardrobe</a></li>
 				<li><a href="#launcher">Launcher</a></li>
-				<li><a href="#pack">Mod pack</a></li>
 				<li><a href="#changelog">Changelog</a></li>
 				<li><a href="#faq">FAQ</a></li>
 			</ul>
@@ -49,32 +52,78 @@
 		<section class="hero" id="top">
 			<div class="hero-bg" aria-hidden="true"><img src="assets/img/hero-bg.jpg" alt="" width="960" height="540"></div>
 			<div class="wrap">
-				<span class="pill"><b>v<span data-version>0.5.1</span></b><span>Minecraft <span data-mc>26.3</span> &middot; Fabric</span></span>
-				<h1 class="wordmark"><span class="grad">GOON CLIENT</span></h1>
-				<p class="hero-sub">The PvE client for survival. Clean HUDs, waypoints, trackers and a tuned performance pack, all set up in one click.</p>
-				<div class="hero-cta" id="download">
-					<a class="btn btn-primary btn-big" href="download/GoonClient-Launcher-windows.zip" download>
-						<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5l7.5-1.05V11.5H3V5.5zm0 13l7.5 1.05V12.5H3v6zm8.5 1.2L21 21v-8.5h-9.5v7.2zm0-15.4v7.2H21V3l-9.5 1.3z"/></svg>
-						Download for Windows <span class="meta" data-size="launcher">29 MB</span>
-					</a>
-					<a class="btn btn-big" href="download/GoonClient.mrpack" download>
-						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 7.5l-9-4.5-9 4.5 9 4.5 9-4.5z"/><path d="M3 7.5v9l9 4.5 9-4.5v-9M12 12v9"/></svg>
-						Get the .mrpack <span class="meta" data-size="mrpack">0.5 MB</span>
-					</a>
+				<div class="hero-copy">
+					<span class="chip glass"><b>v<span data-version>0.15.0</span></b>Minecraft <span data-mc>26.3</span><span class="sep"></span>Fabric<span class="sep chip-extra"></span><span class="chip-extra">Free and open source</span></span>
+					<h1>The PvE client that<br><span class="accent">looks the part.</span></h1>
+					<p class="hero-sub">A frosted-glass HUD, sixteen themes, waypoints, trackers and a tuned mod pack. Made by friends, for playing with friends. Set up in one click.</p>
+					<div class="hero-cta" id="download">
+						<a class="btn btn-primary btn-big" href="download/GoonClient-Launcher-windows.zip" download>
+							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5l7.5-1.05V11.5H3V5.5zm0 13l7.5 1.05V12.5H3v6zm8.5 1.2L21 21v-8.5h-9.5v7.2zm0-15.4v7.2H21V3l-9.5 1.3z"/></svg>
+							Download for Windows <span class="meta" data-size="launcher">58 MB</span>
+						</a>
+						<a class="btn btn-big" href="download/GoonClient.mrpack" download>
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 7.5l-9-4.5-9 4.5 9 4.5 9-4.5z"/><path d="M3 7.5v9l9 4.5 9-4.5v-9M12 12v9"/></svg>
+							Get the .mrpack <span class="meta" data-size="mrpack">29 MB</span>
+						</a>
+					</div>
+					<p class="hero-note">Needs Minecraft: Java Edition. The .mrpack works in the Modrinth App and Prism Launcher on any OS.</p>
 				</div>
-				<p class="hero-note">Free. Needs Minecraft: Java Edition. The .mrpack works in the Modrinth App and Prism on any OS.</p>
 
 				<div class="hero-shot reveal">
+					<div class="glow" aria-hidden="true"></div>
 					<div class="frame glass">
-						<img data-accent-shot="menu" src="assets/img/shot-menu-1600.webp" srcset="assets/img/shot-menu-800.webp 800w, assets/img/shot-menu-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Goon Client menu open in game: module categories on the left and module cards with toggles on the right" width="1600" height="900" fetchpriority="high">
+						<img data-theme-shot="hud" src="assets/img/shot-hud-1600.webp" srcset="assets/img/shot-hud-800.webp 800w, assets/img/shot-hud-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="Goon Client in game: FPS and memory pills, the Potions, Keybinds, Cooldowns and Inventory panels, a target card under the crosshair and a glass hotbar" width="1600" height="900" fetchpriority="high">
+					</div>
+					<div class="float float-a" aria-hidden="true">
+						<span class="hud-pill"><img src="assets/img/hud/fps.png" alt="" width="21" height="21"><span class="div"></span>144<span class="unit">FPS</span></span>
+					</div>
+					<div class="float float-b" aria-hidden="true">
+						<span class="hud-pill"><img src="assets/img/hud/speedometer.png" alt="" width="20" height="20"><span class="div"></span>5.6<span class="unit">b/s</span></span>
+					</div>
+					<div class="float float-c" aria-hidden="true">
+						<span class="hud-pill"><img src="assets/img/hud/memory.png" alt="" width="20" height="20"><span class="div"></span>2148/8192<span class="unit">MB</span><span class="unit">[26%]</span></span>
 					</div>
 				</div>
 
 				<div class="stats">
-					<div class="stat glass reveal"><strong>44</strong><span>modules</span></div>
-					<div class="stat glass reveal"><strong data-mods>24</strong><span>mods in the pack</span></div>
-					<div class="stat glass reveal"><strong>1 click</strong><span>to install and play</span></div>
-					<div class="stat glass reveal"><strong>Free</strong><span>no ads, no tracking</span></div>
+					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/></svg><span class="div"></span>67<span class="unit">modules</span></span>
+					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 7.5l-9-4.5-9 4.5 9 4.5 9-4.5z"/><path d="M3 7.5v9l9 4.5 9-4.5v-9M12 12v9"/></svg><span class="div"></span><strong data-mods>23</strong><span class="unit">mods in the pack</span></span>
+					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.7-.8 1.7-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.8-1.7 1.7-1.7H16a5 5 0 0 0 5-5c0-4-4-7.2-9-7.2z"/><circle cx="7.5" cy="11.5" r="1"/><circle cx="10" cy="7.5" r="1"/><circle cx="15" cy="7.5" r="1"/></svg><span class="div"></span>16<span class="unit">themes</span></span>
+					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg><span class="div"></span>GPL-3.0<span class="unit">open source</span></span>
+				</div>
+			</div>
+		</section>
+
+		<!-- HUD -->
+		<section class="section" id="hud">
+			<div class="wrap split">
+				<div class="reveal">
+					<span class="eyebrow">The HUD</span>
+					<h2>Glass you can actually read.</h2>
+					<p class="lede">Every panel sits on a live blur of the world behind it, with tinted glass, soft shadows and crisp type. It scales with your screen, so it looks the same at any resolution or GUI scale.</p>
+					<ul class="checks">
+						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Pills for the numbers.</strong> FPS, memory, ping, speed, coordinates with the Nether position, and a clock.</span></li>
+						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Panels for the lists.</strong> Potions, Keybinds, Cooldowns and your inventory, each with a count and clean rows.</span></li>
+						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>A target card.</strong> Face, name, health and a smooth bar for whatever you're looking at.</span></li>
+						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>One click to the look.</strong> Load Settings &gt; Configs &gt; Combatant for the full layout, then move anything you like.</span></li>
+					</ul>
+				</div>
+				<div class="hud-stage reveal" aria-hidden="true">
+					<img src="assets/img/hud-stage.jpg" alt="" width="960" height="720" loading="lazy">
+					<div class="stack">
+						<span class="hud-pill"><img src="assets/img/hud/fps.png" alt="" width="21" height="21"><span class="div"></span>76<span class="unit">FPS</span></span>
+						<div class="hud-panel">
+							<header>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6.5L5 19a1.5 1.5 0 0 0 1.3 2h11.4A1.5 1.5 0 0 0 19 19l-5-9.5V3"/><path d="M7.5 15h9"/></svg>
+								<span class="div"></span><strong>Potions</strong><span>Active:<b>3</b></span>
+							</header>
+							<hr>
+							<div class="hud-row"><i style="background:#3a1f26;color:#ff6b81"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg></i><span class="div"></span>Regeneration<em>0:38</em></div>
+							<div class="hud-row"><i style="background:#2c2a1a;color:#f5c542"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M14 4l6 6M4 20l9-9M15 3l2 2-8 8-2-2z"/></svg></i><span class="div"></span>Haste II<em>1:25</em></div>
+							<div class="hud-row"><i style="background:#1d2a33;color:#7cc4ff"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 3L5 13h6l-1 8 8-10h-6l1-8z"/></svg></i><span class="div"></span>Speed II<em>1:28</em></div>
+						</div>
+						<span class="hud-pill"><img src="assets/img/hud/coords.png" alt="" width="20" height="20"><span class="div"></span><span class="unit" style="margin:0">x</span>-101 <span class="unit" style="margin:0">y</span>6 <span class="unit" style="margin:0">z</span>-236<span class="unit">[-12 -29]</span></span>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -85,87 +134,83 @@
 				<div class="section-head reveal">
 					<span class="eyebrow">Features</span>
 					<h2>Everything survival needs on screen</h2>
-					<p>Built for playing with friends on servers: the info you actually look at, laid out cleanly, and nothing that gets in the way.</p>
+					<p>Built for servers with friends: the info you actually look at, laid out cleanly, and nothing that gets in the way.</p>
 				</div>
 
 				<div class="features">
 					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg></div>
-						<h3>ClickGUI</h3>
-						<p>Press <kbd>Right Shift</kbd> for every module in one place, with search, full descriptions, smooth animations and per-module settings.</p>
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="17" height="16" rx="3"/><path d="M3.5 9h17M8 4v5"/></svg></div><span class="div"></span><h3>ClickGUI and Settings</h3></div>
+						<p>Press <kbd>Right Shift</kbd> for six frosted columns of modules, search with <kbd>Ctrl</kbd>+<kbd>F</kbd>, and a Settings window for the HUD, interface, themes and saved setups.</p>
 					</article>
 					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18M9 6l3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3M18 9l3 3-3 3"/></svg></div>
-						<h3>HUD editor</h3>
-						<p>Drag, snap, resize and hide any panel. Panels you haven't moved make room for each other, so nothing overlaps.</p>
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18M9 6l3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3M18 9l3 3-3 3"/></svg></div><span class="div"></span><h3>HUD editor</h3></div>
+						<p>Drag, snap and resize any panel. Select one and every setting it has sits right beside it, from its style to its scale.</p>
 					</article>
 					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
-						<h3>Waypoints</h3>
-						<p>Save spots with <kbd>/wp</kbd>, see them on the compass strip, and get a death waypoint automatically so you can find your stuff.</p>
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><span class="div"></span><h3>Waypoints and minimap</h3></div>
+						<p>Xaero's minimap lives in your HUD. Save spots with <kbd>/wp</kbd>, follow them on the compass and get a death waypoint automatically.</p>
 					</article>
 					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></div>
-						<h3>Spawn Overlay and farm tools</h3>
-						<p>Red where mobs can spawn now, amber where they can at night. Chunk borders and 24, 32 and 128 block rings help you plan farms.</p>
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></div><span class="div"></span><h3>Spawn Overlay and farm tools</h3></div>
+						<p>Red where mobs can spawn now, amber where they can at night, plus chunk borders and spawn range rings for planning farms.</p>
 					</article>
 					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5v-15z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3"/><path d="M9 7h6M9 10.5h6"/></svg></div>
-						<h3>Adventure Log</h3>
-						<p>Press <kbd>J</kbd> for a diary of each world: deaths and what killed you, boss kills, rare finds, advancements and trips, with auto screenshots.</p>
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5v-15z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3"/><path d="M9 7h6M9 10.5h6"/></svg></div><span class="div"></span><h3>Adventure Log</h3></div>
+						<p>Press <kbd>J</kbd> for a diary of each world: deaths and what killed you, bosses, rare finds, advancements and trips, with screenshots.</p>
 					</article>
 					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M6 15l4-4 3 3 5-6"/><path d="M15 8h3v3"/></svg></div>
-						<h3>Loot Tracker</h3>
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M6 15l4-4 3 3 5-6"/><path d="M15 8h3v3"/></svg></div><span class="div"></span><h3>Loot Tracker</h3></div>
 						<p>Everything you pick up, with drops, XP and kills per hour. Reset it when you start a farm run.</p>
 					</article>
 					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg></div>
-						<h3>Mob Info and health bars</h3>
-						<p>Health, type, armour and distance of what you're looking at, plus health bars over hurt mobs.</p>
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg></div><span class="div"></span><h3>Mob Info and health bars</h3></div>
+						<p>A target card with health, armour and distance for what you're looking at, plus health bars and damage numbers over hurt mobs.</p>
 					</article>
 					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L5 13h6l-1 8 8-10h-6l1-8z"/></svg></div>
-						<h3>Combat feedback</h3>
-						<p>Floating damage numbers, an attack cooldown bar, a marker when your jump hit will crit, and shield status.</p>
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l9 16H3l9-16z"/><path d="M12 10v4M12 17h.01"/></svg></div><span class="div"></span><h3>Danger Meter and Boss Prep</h3></div>
+						<p>Warnings for low health, hunger, drowning and breaking gear, and a checklist before the Wither, the Warden or a raid.</p>
 					</article>
 					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l9 16H3l9-16z"/><path d="M12 10v4M12 17h.01"/></svg></div>
-						<h3>Danger Meter and Boss Prep</h3>
-						<p>Warnings for low health, hunger, drowning, fire, poison and breaking gear, plus a pre-fight checklist for armour, food, healing, totems and arrows.</p>
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg></div><span class="div"></span><h3>Zoom, Freelook and crosshair</h3></div>
+						<p>Hold <kbd>C</kbd> to zoom and <kbd>Left Alt</kbd> to look around. Build your own crosshair: five styles, any size and colour.</p>
 					</article>
-					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.6"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.6"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.6"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.6"/></svg></div>
-						<h3>Inventory at a glance</h3>
-						<p>Armour durability, potion timers, an item counter, pickup popups and shulker previews, plus sorting and locked slots.</p>
-					</article>
-					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg></div>
-						<h3>Zoom, Freelook and crosshair</h3>
-						<p>Hold <kbd>C</kbd> to zoom and <kbd>Left Alt</kbd> to look around. Make your own crosshair: five styles, any size and colour.</p>
-					</article>
-					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></div>
-						<h3>World info and quality of life</h3>
-						<p>Coordinates, an FPS graph, CPU and GPU frame readings, a low-resource preset with restore, a screenshot gallery, item physics and a local time changer.</p>
-					</article>
+				</div>
+			</div>
+		</section>
 
-					<article class="feature feature-wide glass reveal">
-						<div>
-							<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.7-.8 1.7-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.8-1.7 1.7-1.7H16a5 5 0 0 0 5-5c0-4-4-7.2-9-7.2z"/><circle cx="7.5" cy="11.5" r="1"/><circle cx="10" cy="7.5" r="1"/><circle cx="15" cy="7.5" r="1"/></svg></div>
-							<h3>Make it yours</h3>
-							<p>Seven accent colours, adjustable blur and panel opacity, and an animated menu background or your own picture. Pick one here and the page and every screenshot switch to it, just like in the client.</p>
+		<!-- Themes -->
+		<section class="section" id="themes">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<span class="eyebrow">Themes</span>
+					<h2>Sixteen looks, one click each</h2>
+					<p>Pick a theme here and this page and every screenshot switch to it, just like in the client.</p>
+				</div>
+				<div class="themes">
+					<div class="swatches glass reveal" role="group" aria-label="Theme">
+						<button class="swatch" style="--s1:#e16b78;--s2:#e07a88" data-theme="Noir" aria-pressed="true">Noir</button>
+						<button class="swatch" style="--s1:#5cc8e7;--s2:#6fd3e2" data-theme="Classic" aria-pressed="false">Classic</button>
+						<button class="swatch" style="--s1:#767c94;--s2:#b7bccb" data-theme="Legacy" aria-pressed="false">Legacy</button>
+						<button class="swatch" style="--s1:#e69a43;--s2:#f2c27a" data-theme="Amber" aria-pressed="false">Amber</button>
+						<button class="swatch" style="--s1:#9b6bff;--s2:#b397ff" data-theme="Purple" aria-pressed="false">Purple</button>
+						<button class="swatch" style="--s1:#2e64cc;--s2:#7aa8ff" data-theme="Blue" aria-pressed="false">Blue</button>
+						<button class="swatch" style="--s1:#5da7ff;--s2:#8cc6ff" data-theme="Azure" aria-pressed="false">Azure</button>
+						<button class="swatch" style="--s1:#7a5cff;--s2:#3d8bf0" data-theme="Nitro" aria-pressed="false">Nitro</button>
+						<button class="swatch" style="--s1:#ff7a45;--s2:#e05c8a" data-theme="Sunset" aria-pressed="false">Sunset</button>
+						<button class="swatch" style="--s1:#2dd9c3;--s2:#7a6cf0" data-theme="Aurora" aria-pressed="false">Aurora</button>
+						<button class="swatch" style="--s1:#43e0b2;--s2:#7febbe" data-theme="Mint" aria-pressed="false">Mint</button>
+						<button class="swatch" style="--s1:#4da3ff;--s2:#8ec6ff" data-theme="Sky" aria-pressed="false">Sky</button>
+						<button class="swatch" style="--s1:#9d8cff;--s2:#c4b9ff" data-theme="Violet" aria-pressed="false">Violet</button>
+						<button class="swatch" style="--s1:#ff6b9a;--s2:#ff9dbc" data-theme="Rose" aria-pressed="false">Rose</button>
+						<button class="swatch" style="--s1:#ff4655;--s2:#ff7d88" data-theme="Red" aria-pressed="false">Red</button>
+						<button class="swatch" style="--s1:#e6e7ea;--s2:#ffffff" data-theme="White" aria-pressed="false">White</button>
+					</div>
+					<div class="reveal">
+						<div class="frame glass">
+							<img data-theme-shot="themes" src="assets/img/shot-themes-1600.webp" srcset="assets/img/shot-themes-800.webp 800w, assets/img/shot-themes-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 800px" alt="The Themes page of the Goon Client settings window, listing each theme's colours" width="1600" height="900" loading="lazy">
 						</div>
-						<div class="swatches" role="group" aria-label="Accent colour">
-							<button class="swatch" style="--s1:#3ddc97;--s2:#3ddc97" data-accent="Mint" aria-pressed="true" aria-label="Mint"></button>
-							<button class="swatch" style="--s1:#4da3ff;--s2:#4da3ff" data-accent="Sky" aria-pressed="false" aria-label="Sky"></button>
-							<button class="swatch" style="--s1:#9d8cff;--s2:#9d8cff" data-accent="Violet" aria-pressed="false" aria-label="Violet"></button>
-							<button class="swatch" style="--s1:#ff6b9a;--s2:#ff6b9a" data-accent="Rose" aria-pressed="false" aria-label="Rose"></button>
-							<button class="swatch" style="--s1:#f5b83d;--s2:#f5b83d" data-accent="Amber" aria-pressed="false" aria-label="Amber"></button>
-							<button class="swatch" style="--s1:#ff4655;--s2:#ff4655" data-accent="Red" aria-pressed="false" aria-label="Red"></button>
-							<button class="swatch" style="--s1:#e6e7ea;--s2:#e6e7ea" data-accent="White" aria-pressed="false" aria-label="White"></button>
-						</div>
-					</article>
+						<p class="themes-note">Adjustable blur and panel opacity, an animated menu background or your own picture are in the Interface page.</p>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -181,39 +226,50 @@
 
 				<div class="tabs glass reveal" role="tablist" aria-label="Screenshots">
 					<button class="tab" role="tab" id="tab-hud" aria-controls="viewer" aria-selected="true" data-shot="hud">In game</button>
-					<button class="tab" role="tab" id="tab-tools" aria-controls="viewer" aria-selected="false" data-shot="tools">Boss Prep</button>
 					<button class="tab" role="tab" id="tab-menu" aria-controls="viewer" aria-selected="false" data-shot="menu">ClickGUI</button>
 					<button class="tab" role="tab" id="tab-settings" aria-controls="viewer" aria-selected="false" data-shot="settings">Settings</button>
+					<button class="tab" role="tab" id="tab-module" aria-controls="viewer" aria-selected="false" data-shot="module">Module settings</button>
 					<button class="tab" role="tab" id="tab-editor" aria-controls="viewer" aria-selected="false" data-shot="editor">HUD editor</button>
-					<button class="tab" role="tab" id="tab-minimap" aria-controls="viewer" aria-selected="false" data-shot="minimap-settings">Minimap</button>
-					<button class="tab" role="tab" id="tab-overlays" aria-controls="viewer" aria-selected="false" data-shot="overlays">Overlays</button>
-					<button class="tab" role="tab" id="tab-log" aria-controls="viewer" aria-selected="false" data-shot="log">Adventure Log</button>
-					<button class="tab" role="tab" id="tab-pause" aria-controls="viewer" aria-selected="false" data-shot="pause">Pause menu</button>
+					<button class="tab" role="tab" id="tab-configs" aria-controls="viewer" aria-selected="false" data-shot="configs">Configs</button>
 					<button class="tab" role="tab" id="tab-title" aria-controls="viewer" aria-selected="false" data-shot="title">Main menu</button>
+					<button class="tab" role="tab" id="tab-pause" aria-controls="viewer" aria-selected="false" data-shot="pause">Pause menu</button>
+					<button class="tab" role="tab" id="tab-log" aria-controls="viewer" aria-selected="false" data-shot="log">Adventure Log</button>
 					<button class="tab" role="tab" id="tab-options" aria-controls="viewer" aria-selected="false" data-shot="options">Options</button>
-					<button class="tab" role="tab" id="tab-performance" aria-controls="viewer" aria-selected="false" data-shot="performance">Low-resource preset</button>
-					<button class="tab" role="tab" id="tab-screenshots" aria-controls="viewer" aria-selected="false" data-shot="screenshots">Screenshots</button>
 				</div>
 
 				<div class="viewer reveal" id="viewer" role="tabpanel" aria-labelledby="tab-hud">
 					<div class="frame glass">
 						<div class="stage">
-							<img class="active" data-shot="hud" src="assets/img/shot-hud-1600.webp" srcset="assets/img/shot-hud-800.webp 800w, assets/img/shot-hud-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="In game with the Goon Client HUD: coordinates, compass, Mob Info, a health bar and damage number over a husk, potion timers, armour, the Loot Tracker and shield status" width="1600" height="900" loading="lazy">
-							<img data-shot="tools" src="assets/img/shot-tools-1600.webp" srcset="assets/img/shot-tools-800.webp 800w, assets/img/shot-tools-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Boss Prep checklist rating armour, weapon, food, healing, totems, arrows, blocks and free slots, under the FPS graph" width="1600" height="900" loading="lazy">
-							<img data-shot="menu" src="assets/img/shot-menu-1600.webp" srcset="assets/img/shot-menu-800.webp 800w, assets/img/shot-menu-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Goon Client ClickGUI with module cards and toggles" width="1600" height="900" loading="lazy">
-							<img data-shot="settings" src="assets/img/shot-settings-1600.webp" srcset="assets/img/shot-settings-800.webp 800w, assets/img/shot-settings-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Custom Crosshair settings page with styles, colours and size sliders" width="1600" height="900" loading="lazy">
-							<img data-shot="editor" src="assets/img/shot-editor-1600.webp" srcset="assets/img/shot-editor-800.webp 800w, assets/img/shot-editor-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The HUD editor showing every panel with outlines ready to drag" width="1600" height="900" loading="lazy">
-							<img data-shot="minimap-settings" src="assets/img/shot-minimap-settings-1600.webp" srcset="assets/img/shot-minimap-settings-800.webp 800w, assets/img/shot-minimap-settings-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The integrated Minimap module in Goon ClickGUI with visibility, scale, native settings, placement reset and HUD editing controls" width="1600" height="900" loading="lazy">
-							<img data-shot="overlays" src="assets/img/shot-overlays-1600.webp" srcset="assets/img/shot-overlays-800.webp 800w, assets/img/shot-overlays-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="Night time with the Spawn Overlay marking spawnable blocks in red, chunk borders and spawn range rings" width="1600" height="900" loading="lazy">
-							<img data-shot="log" src="assets/img/shot-log-1600.webp" srcset="assets/img/shot-log-800.webp 800w, assets/img/shot-log-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Adventure Log screen listing a death, a boss kill, rare finds, an advancement and a trip to the Nether" width="1600" height="900" loading="lazy">
-							<img data-shot="pause" src="assets/img/shot-pause-1600.webp" srcset="assets/img/shot-pause-800.webp 800w, assets/img/shot-pause-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Goon Client pause menu over the blurred game, with a two-column button layout and a This session stats card" width="1600" height="900" loading="lazy">
-							<img data-shot="title" src="assets/img/shot-title-1600.webp" srcset="assets/img/shot-title-800.webp 800w, assets/img/shot-title-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The Goon Client main menu with its button column, a What's new card and the account card over the animated Goon background" width="1600" height="900" loading="lazy">
-							<img data-shot="options" src="assets/img/shot-options-1600.webp" srcset="assets/img/shot-options-800.webp 800w, assets/img/shot-options-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The custom Goon Options hub with settings cards and a field-of-view slider" width="1600" height="900" loading="lazy">
-							<img data-shot="performance" src="assets/img/shot-performance-1600.webp" srcset="assets/img/shot-performance-800.webp 800w, assets/img/shot-performance-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The low-resource preset showing its changes and Apply, Restore previous and Done buttons" width="1600" height="900" loading="lazy">
-							<img data-shot="screenshots" src="assets/img/shot-screenshots-1600.webp" srcset="assets/img/shot-screenshots-800.webp 800w, assets/img/shot-screenshots-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1040px" alt="The screenshot manager displaying six recent captures with preview, folder and paging controls" width="1600" height="900" loading="lazy">
+							<img class="active" data-shot="hud" data-themed src="assets/img/shot-hud-1600.webp" srcset="assets/img/shot-hud-800.webp 800w, assets/img/shot-hud-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="In game with the Goon Client HUD: FPS and memory pills, Potions, Keybinds, Cooldowns and Inventory panels, a target card and the glass hotbar" width="1600" height="900" loading="lazy">
+							<img data-shot="menu" data-themed src="assets/img/shot-menu-1600.webp" srcset="assets/img/shot-menu-800.webp 800w, assets/img/shot-menu-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The ClickGUI: six frosted columns of modules with check marks for the ones that are on" width="1600" height="900" loading="lazy">
+							<img data-shot="settings" data-themed src="assets/img/shot-settings-1600.webp" srcset="assets/img/shot-settings-800.webp 800w, assets/img/shot-settings-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The Settings window on its HUD page: a card with a switch for every HUD element" width="1600" height="900" loading="lazy">
+							<img data-shot="module" src="assets/img/shot-module-1600.webp" srcset="assets/img/shot-module-800.webp 800w, assets/img/shot-module-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="A module's settings panel with switches, sliders and option lists" width="1600" height="900" loading="lazy">
+							<img data-shot="editor" src="assets/img/shot-editor-1600.webp" srcset="assets/img/shot-editor-800.webp 800w, assets/img/shot-editor-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The HUD editor with the Potions panel selected and its settings listed beside it" width="1600" height="900" loading="lazy">
+							<img data-shot="configs" src="assets/img/shot-configs-1600.webp" srcset="assets/img/shot-configs-800.webp 800w, assets/img/shot-configs-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The Configs page with built-in setups like Combatant, Survival, Builder and Boss run" width="1600" height="900" loading="lazy">
+							<img data-shot="title" src="assets/img/shot-title-1600.webp" srcset="assets/img/shot-title-800.webp 800w, assets/img/shot-title-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The Goon Client main menu with the logo, a button column, a What's new card and the account card" width="1600" height="900" loading="lazy">
+							<img data-shot="pause" src="assets/img/shot-pause-1600.webp" srcset="assets/img/shot-pause-800.webp 800w, assets/img/shot-pause-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The pause menu over the game, with glass buttons and a This session card" width="1600" height="900" loading="lazy">
+							<img data-shot="log" src="assets/img/shot-log-1600.webp" srcset="assets/img/shot-log-800.webp 800w, assets/img/shot-log-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The Adventure Log listing finds, a boss fight, an advancement, a death and a trip to the Nether" width="1600" height="900" loading="lazy">
+							<img data-shot="options" src="assets/img/shot-options-1600.webp" srcset="assets/img/shot-options-800.webp 800w, assets/img/shot-options-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The Goon Options hub with cards for every settings page and a field-of-view slider" width="1600" height="900" loading="lazy">
 						</div>
 					</div>
-					<p class="caption" id="caption" aria-live="polite"><strong>In game.</strong> Mob Info beside the crosshair, a health bar and damage number over the husk, potion timers, armour, the Loot Tracker and shield status.</p>
+					<p class="caption" id="caption" aria-live="polite"><strong>In game.</strong> FPS and memory pills, Potions, Keybinds, Cooldowns and Inventory panels, a target card under the crosshair and the glass hotbar.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Wardrobe -->
+		<section class="section" id="wardrobe">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<span class="eyebrow">Wardrobe</span>
+					<h2>Capes for the crew</h2>
+					<p>Ten original capes in the Goon look, made for this client. Equip one from the main menu and see it in third person, or share it with friends who play Goon Client too.</p>
+				</div>
+				<div class="frame glass reveal capes-strip">
+					<img src="assets/img/capes-2000.webp" srcset="assets/img/capes-1000.webp 1000w, assets/img/capes-2000.webp 2000w" sizes="(max-width: 1100px) 94vw, 1180px" alt="All ten Goon capes side by side: Nation Noir, Nation Mint, After Hours, Nation Gold, Glacier, Redline, Deep Blue, Rose Signal, Ghost and Ember" width="2000" height="396" loading="lazy">
+				</div>
+				<div class="frame glass reveal capes-wardrobe">
+					<img src="assets/img/shot-wardrobe-1600.webp" srcset="assets/img/shot-wardrobe-800.webp 800w, assets/img/shot-wardrobe-1600.webp 1600w" sizes="(max-width: 960px) 94vw, 860px" alt="The Goon wardrobe with cape cards and a large preview of Nation Noir" width="1600" height="900" loading="lazy">
 				</div>
 			</div>
 		</section>
@@ -227,12 +283,12 @@
 				<div class="reveal">
 					<span class="eyebrow">Launcher</span>
 					<h2>Press Play. That's the setup.</h2>
-					<p>The Goon Client Launcher gets Minecraft <span data-mc>26.3</span>, Fabric and the whole mod pack ready for you, then starts the game.</p>
+					<p class="lede">The Goon Client Launcher gets Minecraft <span data-mc>26.3</span>, Fabric and the whole mod pack ready for you, then starts the game.</p>
 					<ul class="checks">
 						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>One click.</strong> Installs the game, Fabric, Goon Client and every mod in the pack.</span></li>
-						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Updates itself.</strong> New Goon Client versions download when you open the launcher, and every file is checked against its checksum.</span></li>
+						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Updates itself.</strong> New versions download when you open the launcher, and every file is checked against its checksum.</span></li>
 						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Fast first launch.</strong> Reuses game files you already have from the Minecraft Launcher instead of downloading them again.</span></li>
-						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Its own folder.</strong> Goon Client lives in <code>.goonclient</code>, so your normal Minecraft worlds and settings are never touched.</span></li>
+						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Its own folder.</strong> Goon Client lives in <code>.goonclient</code>, so your normal worlds and settings are never touched.</span></li>
 					</ul>
 					<a class="btn btn-primary" href="download/GoonClient-Launcher-windows.zip" download>
 						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
@@ -247,8 +303,8 @@
 			<div class="wrap">
 				<div class="section-head reveal">
 					<span class="eyebrow">Mod pack</span>
-					<h2>Fast, good-looking, and ready to go</h2>
-					<p>Goon Client ships with a hand-picked Fabric pack. Every mod is downloaded straight from Modrinth, so the authors get the credit and the downloads.</p>
+					<h2>Fast, good-looking and ready to go</h2>
+					<p>Goon Client ships with a hand-picked Fabric pack. Every mod keeps its author's credit and licence, with links to their pages.</p>
 				</div>
 				<div class="pack">
 					<div class="pack-group glass reveal">
@@ -258,7 +314,6 @@
 							<li><a href="https://modrinth.com/mod/lithium" target="_blank" rel="noopener">Lithium <span>game logic</span></a></li>
 							<li><a href="https://modrinth.com/mod/ferrite-core" target="_blank" rel="noopener">FerriteCore <span>memory</span></a></li>
 							<li><a href="https://modrinth.com/mod/immediatelyfast" target="_blank" rel="noopener">ImmediatelyFast <span>UI and text</span></a></li>
-							<li><a href="https://modrinth.com/mod/entityculling" target="_blank" rel="noopener">EntityCulling <span>hidden mobs</span></a></li>
 							<li><a href="https://modrinth.com/mod/dynamic-fps" target="_blank" rel="noopener">Dynamic FPS <span>idle saving</span></a></li>
 							<li><a href="https://modrinth.com/mod/krypton" target="_blank" rel="noopener">Krypton <span>networking</span></a></li>
 						</ul>
@@ -300,12 +355,36 @@
 							<li><a href="https://modrinth.com/mod/modmenu" target="_blank" rel="noopener">Mod Menu <span>mod list</span></a></li>
 							<li><a href="https://modrinth.com/mod/cloth-config" target="_blank" rel="noopener">Cloth Config <span>settings screens</span></a></li>
 							<li><a href="https://modrinth.com/mod/fabric-language-kotlin" target="_blank" rel="noopener">Fabric Language Kotlin <span>library</span></a></li>
-							<li><a href="https://modrinth.com/mod/libipn" target="_blank" rel="noopener">libIPN <span>library</span></a></li>
 							<li><a href="https://modrinth.com/mod/placeholder-api" target="_blank" rel="noopener">Placeholder API <span>library</span></a></li>
 						</ul>
 					</div>
 				</div>
-				<p class="pack-note reveal">Shaders are included but off by default. Turn them on in Video Settings when you want them.</p>
+				<p class="pack-note reveal">Shaders are included but off by default. Want culling for hidden mobs? Install <a href="https://modrinth.com/mod/entityculling" target="_blank" rel="noopener">EntityCulling</a> from Modrinth yourself; its terms don't allow us to bundle it.</p>
+			</div>
+		</section>
+
+		<!-- Open source -->
+		<section class="section" id="source">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<span class="eyebrow">Open source</span>
+					<h2>Free software, credited properly</h2>
+					<p>Goon Client is licensed under the GPL-3.0. You can read, change and share every line.</p>
+				</div>
+				<div class="open">
+					<article class="feature glass reveal">
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg></div><span class="div"></span><h3>Source in every download</h3></div>
+						<p>The launcher zip includes the full source, licence and notices, so you always have the code for the exact build you run.</p>
+					</article>
+					<article class="feature glass reveal">
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 12h6M12 9v6"/></svg></div><span class="div"></span><h3>Built on Combatant</h3></div>
+						<p>The HUD and glass design are ported from <a href="https://github.com/pivosos2007/combatant-client" target="_blank" rel="noopener">Combatant Client</a> by pivosos2007, under the same GPL-3.0 licence.</p>
+					</article>
+					<article class="feature glass reveal">
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7.5l-9-4.5-9 4.5 9 4.5 9-4.5z"/><path d="M3 7.5v9l9 4.5 9-4.5v-9M12 12v9"/></svg></div><span class="div"></span><h3>Mods keep their licences</h3></div>
+						<p>Bundled mods are unmodified and keep their own licences and authors, listed with links in every build. Xaero's maps are included with the author's modpack permission.</p>
+					</article>
+				</div>
 			</div>
 		</section>
 
@@ -319,21 +398,24 @@
 				</div>
 				<article class="changelog glass reveal">
 <!-- changelog:start -->
-					<div class="changelog-head"><h3>Goon Client v0.5.1</h3><span>Minimap meets the HUD</span></div>
-					<p class="intro">PvE client for <strong>Minecraft 26.3</strong> (Fabric). Update through the launcher, or grab the new .mrpack.</p>
-					<h4>New</h4>
+					<div class="changelog-head"><h3>Goon Client v0.15.0</h3><span>A new look, top to bottom</span></div>
 					<ul>
-						<li class="add">Minimap module in the ClickGUI: enable, resize, reset placement and open Xaero's map, radar and waypoint settings</li>
-						<li class="add">Live minimap in Edit HUD: drag to move, scroll to resize, right-click to hide and restore it from Elements</li>
+						<li class="add">New Goon Client logo: a glass tile with a rounded-square G in your theme colour.</li>
+						<li class="add">Nation Noir cape, and every cape redrawn in the new style with the Goon mark.</li>
+						<li class="add">goonnation.xyz rebuilt: frosted glass, all 16 themes (the screenshots switch with them) and a cape gallery.</li>
+						<li class="add">Launcher restyled to match: new logo, Noir pink and glass panels.</li>
+						<li class="add">HUD ported from Combatant's source: its exact sizes, gaps, colours and Onest font, scaling with your screen.</li>
+						<li class="add">Real frosted glass: the world behind the HUD, hotbar and menus is blurred live.</li>
+						<li class="change">Settings, pause menu, main menu and Wardrobe use the see-through glass.</li>
+						<li class="change">HUD editor lists every setting of the selected element.</li>
+						<li class="change">Potions, Keybinds, Cooldowns, Inventory, target card and notifications match Combatant's layout.</li>
+						<li class="change">Theme colours are Combatant's exact ones (Noir pink is a little brighter).</li>
+						<li class="change">Built-in setups only switch modules now; your theme and HUD layout stay put.</li>
+						<li class="change">Discord status works on Windows again and shows the right symbols.</li>
+						<li class="change">Goon Client is now GPL-3.0; the launcher includes the source and credits Combatant.</li>
+						<li class="change">Bundled mods no longer pin exact versions; EntityCulling is now an optional separate install.</li>
 					</ul>
-					<h4>Changed</h4>
-					<ul>
-						<li class="change">HUD layout now reserves the minimap's measured size and native information labels instead of guessing a gap</li>
-						<li class="change">Crowded HUD columns can spill sideways and clear the hotbar instead of jumping over the map</li>
-						<li class="change">Xaero's visibility controls and Goon's Minimap switch stay synchronized</li>
-						<li class="change">Enlarged maps follow the same HUD anchor; position and scale are saved with your Goon layout</li>
-					</ul>
-					<p class="intro">Includes 0.5.0's Goon Options, low-resource preset, screenshot manager, Hardware Usage, Item Physics and Time Changer.</p>
+					<p class="intro">Load Settings &gt; Configs &gt; Combatant for the full HUD.</p>
 <!-- changelog:end -->
 				</article>
 			</div>
@@ -349,18 +431,15 @@
 				</div>
 				<div class="trust">
 					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16.5 6.5l3 3M14 9l2 2"/></svg></div>
-						<h3>Microsoft sign-in</h3>
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16.5 6.5l3 3M14 9l2 2"/></svg></div><span class="div"></span><h3>Microsoft sign-in</h3></div>
 						<p>You sign in on Microsoft's own website with a short code. Goon Client never sees or stores your password.</p>
 					</article>
 					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
-						<h3>Stays on your PC</h3>
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div><span class="div"></span><h3>Stays on your PC</h3></div>
 						<p>Sign-in tokens are saved only on your computer and only ever sent to Microsoft, Xbox Live and Minecraft.</p>
 					</article>
 					<article class="feature glass reveal">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 6.1c.5-.1.9-.1 1.4-.1 5 0 9 6 9 6a17 17 0 0 1-2.6 3.3M6.6 6.6C4.2 8.2 3 12 3 12s4 6 9 6c1.5 0 2.9-.5 4.1-1.2"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg></div>
-						<h3>No tracking</h3>
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 6.1c.5-.1.9-.1 1.4-.1 5 0 9 6 9 6a17 17 0 0 1-2.6 3.3M6.6 6.6C4.2 8.2 3 12 3 12s4 6 9 6c1.5 0 2.9-.5 4.1-1.2"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg></div><span class="div"></span><h3>No tracking</h3></div>
 						<p>No analytics, no ads, no telemetry, in the client, the launcher or this site. <a href="privacy.html">Read the details</a>.</p>
 					</article>
 				</div>
@@ -380,12 +459,20 @@
 						<p>Download the launcher, unzip it anywhere and run <strong>Goon Client Launcher</strong>. Press Play: it installs everything and starts the game. If you'd rather use the Modrinth App or Prism Launcher, download the .mrpack and import it there instead.</p>
 					</details>
 					<details class="glass reveal">
+						<summary>How do I get the HUD from the screenshots?</summary>
+						<p>Open the menu with <kbd>Right Shift</kbd>, go to Settings, then Configs, and load <strong>Combatant</strong>. It switches on the pills and panels shown here and keeps your theme. Undo brings back what you had.</p>
+					</details>
+					<details class="glass reveal">
 						<summary>Do I need to own Minecraft?</summary>
 						<p>Yes. Goon Client runs on Minecraft: Java Edition and you sign in with your own Microsoft account, the same one you use for the normal Minecraft Launcher.</p>
 					</details>
 					<details class="glass reveal">
 						<summary>Is it allowed on servers?</summary>
 						<p>Goon Client is made for survival quality of life, not for getting an edge in PvP. Still, every server has its own rules, and some don't allow things like minimaps or fullbright. Check your server's rules and turn off anything they don't allow.</p>
+					</details>
+					<details class="glass reveal">
+						<summary>Is it open source?</summary>
+						<p>Yes, under the GPL-3.0. The launcher download includes the source for that exact version. The HUD design comes from <a href="https://github.com/pivosos2007/combatant-client" target="_blank" rel="noopener">Combatant Client</a>, also GPL-3.0.</p>
 					</details>
 					<details class="glass reveal">
 						<summary>Will it mess with my normal Minecraft?</summary>
@@ -399,10 +486,6 @@
 						<summary>Windows says the launcher is from an unknown publisher.</summary>
 						<p>The launcher isn't code-signed yet, so Windows SmartScreen may warn you the first time. Click <strong>More info</strong>, then <strong>Run anyway</strong>. Only download it from this site.</p>
 					</details>
-					<details class="glass reveal">
-						<summary>How do I open the menu in game?</summary>
-						<p>Press <kbd>Right Shift</kbd>. From there you can turn modules on and off, change their settings and open the HUD editor to move panels around.</p>
-					</details>
 				</div>
 			</div>
 		</section>
@@ -411,6 +494,7 @@
 		<section>
 			<div class="wrap">
 				<div class="cta glass reveal">
+					<img src="assets/img/mark.svg" alt="" width="68" height="68">
 					<h2>Ready to play?</h2>
 					<p>Grab the launcher and you'll be in game in a couple of minutes.</p>
 					<div class="hero-cta">
@@ -429,17 +513,18 @@
 		<div class="wrap">
 			<div class="foot">
 				<a class="brand" href="#top">
-					<img src="assets/img/icon.png" alt="" width="34" height="34">
-					<span class="brand-name"><strong>GOON CLIENT</strong><span>by Goon Nation</span></span>
+					<img src="assets/img/mark.svg" alt="" width="36" height="36">
+					<span class="wordmark">GOON <em>CLIENT</em></span>
 				</a>
 				<nav class="foot-links" aria-label="Footer">
 					<a href="#features">Features</a>
 					<a href="#changelog">Changelog</a>
+					<a href="#source">Open source</a>
 					<a href="privacy.html">Privacy and sign-in</a>
 					<a href="#download">Download</a>
 				</nav>
 			</div>
-			<p class="legal">&copy; <span data-year>2026</span> Goon Nation. NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT. Minecraft is a trademark of Mojang AB. Mods in the pack belong to their authors and are downloaded from Modrinth.</p>
+			<p class="legal">&copy; <span data-year>2026</span> Goon Nation. Goon Client is free software under the GPL-3.0; its HUD design is adapted from Combatant Client by pivosos2007. NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT. Minecraft is a trademark of Mojang AB. Mods in the pack belong to their authors.</p>
 		</div>
 	</footer>
 

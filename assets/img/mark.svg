@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Goon Client">
+  <defs>
+    <linearGradient id="gc-tile" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1e2027"/><stop offset="1" stop-color="#0c0d10"/></linearGradient>
+    <linearGradient id="gc-g" x1="20" y1="20" x2="80" y2="80" gradientUnits="userSpaceOnUse"><stop offset="0.00" stop-color="#f8a7b0"/><stop offset="0.48" stop-color="#e16b78"/><stop offset="1.00" stop-color="#b44457"/></linearGradient>
+    <linearGradient id="gc-sheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".07"/><stop offset=".46" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="gc-rim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity=".06"/></linearGradient>
+    <filter id="gc-glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7"/></filter>
+    <clipPath id="gc-clip"><rect x="3" y="3" width="94" height="94" rx="23"/></clipPath>
+    <mask id="gc-open" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><rect width="100" height="100" fill="#fff"/><rect x="63" y="20" width="17" height="24" fill="#000"/></mask>
+  </defs>
+  <rect x="3" y="3" width="94" height="94" rx="23" fill="url(#gc-tile)"/>
+  <g clip-path="url(#gc-clip)"><g fill="#e16b78" opacity=".42" filter="url(#gc-glow)"><path fill-rule="evenodd" mask="url(#gc-open)" d="M38 21H62A17 17 0 0 1 79 38V62A17 17 0 0 1 62 79H38A17 17 0 0 1 21 62V38A17 17 0 0 1 38 21ZM40.5 33H59.5A7.5 7.5 0 0 1 67 40.5V59.5A7.5 7.5 0 0 1 59.5 67H40.5A7.5 7.5 0 0 1 33 59.5V40.5A7.5 7.5 0 0 1 40.5 33Z"/><rect x="51" y="44" width="28" height="12"/></g></g>
+  <rect x="3" y="3" width="94" height="94" rx="23" fill="url(#gc-sheen)"/>
+  <rect x="3.6" y="3.6" width="92.8" height="92.8" rx="22.4" fill="none" stroke="url(#gc-rim)" stroke-width="1.2"/>
+  <g fill="url(#gc-g)"><path fill-rule="evenodd" mask="url(#gc-open)" d="M38 21H62A17 17 0 0 1 79 38V62A17 17 0 0 1 62 79H38A17 17 0 0 1 21 62V38A17 17 0 0 1 38 21ZM40.5 33H59.5A7.5 7.5 0 0 1 67 40.5V59.5A7.5 7.5 0 0 1 59.5 67H40.5A7.5 7.5 0 0 1 33 59.5V40.5A7.5 7.5 0 0 1 40.5 33Z"/><rect x="51" y="44" width="28" height="12"/></g>
+</svg>
