@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Privacy and Sign-in</title>
-	<meta name="description" content="How Goon Client signs you in with Microsoft, what it stores on your computer and which services it talks to. No tracking, no data collection.">
-	<meta name="theme-color" content="#08090c">
+	<meta name="description" content="How Goon Client signs you in with Microsoft, what it stores on your computer and which services it talks to. Local account storage and optional connected features.">
+	<meta name="theme-color" content="#101113">
 	<link rel="canonical" href="https://goonnation.xyz/privacy.html">
 	<link rel="icon" type="image/svg+xml" href="assets/img/mark.svg">
 	<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png">
@@ -21,33 +21,18 @@
 <body>
 	<a class="skip" href="#main">Skip to content</a>
 
-	<header class="nav" id="nav">
-		<div class="wrap nav-inner">
-			<a class="brand" href="./" aria-label="Goon Client home">
-				<img src="assets/img/mark.svg" alt="" width="36" height="36">
-				<span class="wordmark">GOON <em>CLIENT</em></span>
-			</a>
-			<ul class="nav-links" id="nav-links">
-				<li><a href="./#hud">HUD</a></li>
-				<li><a href="./#features">Features</a></li>
-				<li><a href="./#themes">Themes</a></li>
-				<li><a href="./#screenshots">Screenshots</a></li>
-				<li><a href="./#launcher">Launcher</a></li>
-				<li><a href="./#changelog">Changelog</a></li>
-				<li><a href="./#faq">FAQ</a></li>
-			</ul>
-			<a class="btn btn-primary" href="./#download">Download</a>
-			<button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-			</button>
-		</div>
-	</header>
+	<header class="nav" id="nav"><div class="wrap nav-inner">
+<a class="brand" href="/#top" aria-label="Goon Client home"><img src="assets/img/mark.svg" alt="" width="34" height="34"><span class="wordmark">GOON <span>CLIENT</span></span></a>
+<nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="/#features">Features</a><a href="/#screenshots">Preview</a><a href="/#wardrobe">Cosmetics</a><a href="/#faq">FAQ</a></nav>
+<a class="btn btn-small btn-primary nav-download" href="/#download">Download</a>
+<button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+</div></header>
 
 	<main id="main" class="wrap">
 		<article class="doc">
 			<h1>Privacy and sign-in</h1>
-			<p class="lede">The short version: Goon Client doesn't collect, sell or share anything about you. There are no Goon Nation servers that your data goes to. Here is exactly what happens with your account.</p>
-			<p class="updated">Last updated 2 October 2026</p>
+			<p class="lede">Your account credentials stay on your computer or go to Microsoft's authentication services. Optional cape sharing and Discord presence send limited information when you enable them. This website has no analytics.</p>
+			<p class="updated">Last updated 4 October 2026</p>
 
 			<section class="glass">
 				<h2>Who makes Goon Client</h2>
@@ -68,7 +53,7 @@
 
 			<section class="glass" id="stored">
 				<h2>What's stored on your computer</h2>
-				<p>Everything lives in Goon Client's own folder, <code>%APPDATA%\.goonclient</code>. Nothing is uploaded anywhere.</p>
+				<p>Everything lives in Goon Client's own folder, <code>%APPDATA%\.goonclient</code>. These files are stored locally; optional connected features are described below.</p>
 				<div class="table-scroll">
 					<table>
 						<thead>
@@ -86,7 +71,7 @@
 
 			<section class="glass" id="services">
 				<h2>Which services it talks to</h2>
-				<p>The launcher only connects to these services, and only for the reason listed. Your sign-in tokens are only ever sent to the Microsoft, Xbox Live and Minecraft services.</p>
+				<p>The launcher connects to these services for sign-in and installation, and to its configured update website for release checks. Your sign-in tokens are only ever sent to the Microsoft, Xbox Live and Minecraft services.</p>
 				<div class="table-scroll">
 					<table>
 						<thead>
@@ -102,8 +87,15 @@
 						</tbody>
 					</table>
 				</div>
-				<p>Once the game is running, Minecraft connects to Mojang and Microsoft services as it normally would (skins, multiplayer sign-in, Realms) and to the servers you choose to join. The Goon Client mod itself doesn't connect to anything.</p>
+				<p>Once the game is running, Minecraft connects to Mojang and Microsoft services as it normally would (skins, multiplayer sign-in, Realms) and to the servers you choose to join. Optional connected features in the Goon Client mod are described below.</p>
 			</section>
+
+			<section class="glass" id="optional">
+                <h2>Optional connected features</h2>
+                <p><strong>Cape sharing:</strong> off by default and inactive until the owner configures a cosmetics service. If you turn on Share with friends, the service receives your Minecraft name, UUID, selected cape ID and an account-verification challenge. Looking up other players’ capes sends their UUIDs to that service. Your Minecraft access token goes to Mojang for the verification step, never to the cape service. The service host may also record normal connection information such as IP addresses.</p>
+                <p><strong>Discord presence:</strong> off by default. When enabled, Goon Client passes generic menu, singleplayer or multiplayer activity and an optional elapsed timer to your desktop Discord app. Discord can display this on your profile. Server addresses and Minecraft account credentials are not included.</p>
+                <p><strong>Updates:</strong> the launcher checks the configured update website for a release manifest and downloads the pack when you choose to update. The host receives normal web requests. Your sign-in tokens are not sent to the update website.</p>
+            </section>
 
 			<section class="glass" id="website">
 				<h2>This website</h2>
@@ -121,23 +113,7 @@
 		</article>
 	</main>
 
-	<footer>
-		<div class="wrap">
-			<div class="foot">
-				<a class="brand" href="./">
-					<img src="assets/img/mark.svg" alt="" width="36" height="36">
-				<span class="wordmark">GOON <em>CLIENT</em></span>
-				</a>
-				<nav class="foot-links" aria-label="Footer">
-					<a href="./#features">Features</a>
-					<a href="./#changelog">Changelog</a>
-					<a href="privacy.html">Privacy and sign-in</a>
-					<a href="./#download">Download</a>
-				</nav>
-			</div>
-			<p class="legal">&copy; <span data-year>2026</span> Goon Nation. NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT. Minecraft is a trademark of Mojang AB. Mods in the pack belong to their authors and are downloaded from Modrinth.</p>
-		</div>
-	</footer>
+	<footer><div class="wrap"><div class="foot"><a class="brand" href="/#top"><img src="assets/img/mark.svg" alt="" width="30" height="30"><span class="wordmark">GOON <span>CLIENT</span></span></a><nav class="foot-links" aria-label="Footer"><a href="/#changelog">Changelog</a><a href="/#source">Source &amp; credits</a><a href="privacy.html">Privacy</a><a href="/#download">Download</a></nav></div><p class="legal">© <span data-year>2026</span> Goon Nation. Goon Client is free software under GPL-3.0. HUD design adapted from Combatant Client by pivosos2007. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</p></div></footer>
 
 	<script src="assets/js/site.js" defer></script>
 </body>
