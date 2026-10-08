@@ -45,7 +45,7 @@
 	// ---------- Screenshot tabs ----------
 	var captions = {
 		hud: "<strong>In game.</strong> FPS and memory pills, Potions, Keybinds, Cooldowns and Inventory panels, a target card under the crosshair and the glass hotbar.",
-		menu: "<strong>ClickGUI.</strong> Press Right Shift for six frosted columns of modules. Left-click toggles, right-click opens settings, Ctrl+F searches.",
+		menu: "<strong>ClickGUI.</strong> Press Right Shift for one glass window with category tabs and icon cards. Options opens settings; Enabled switches the module; Ctrl+F searches.",
 		settings: "<strong>Settings.</strong> The HUD page: a card with a switch for every element, next to pages for the interface, themes and saved setups.",
 		module: "<strong>Module settings.</strong> Every module has its own panel of switches, sliders and option lists, with its shortcut key at the top.",
 		editor: "<strong>HUD editor.</strong> Drag panels anywhere and scroll to resize. Select one and all its settings sit right beside it.",
@@ -153,7 +153,11 @@
 		swatches.forEach(function (s) {
 			s.setAttribute("aria-pressed", s === swatch ? "true" : "false");
 		});
-		showShots(swatch.getAttribute("data-theme"));
+		var theme = swatch.getAttribute("data-theme");
+        document.querySelectorAll("img[data-brand]").forEach(function (img) {
+            img.src = "assets/img/mark-" + theme.toLowerCase() + ".svg?v=0.17.1";
+        });
+        showShots(theme);
 	}
 
 	swatches.forEach(function (swatch) {

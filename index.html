@@ -7,8 +7,8 @@
 	<meta name="description" content="Goon Client is a free, open-source PvE client for Minecraft Java 26.3 by Goon Nation: a frosted-glass HUD, sixteen themes, waypoints, trackers and a tuned mod pack, installed in one click.">
 	<meta name="theme-color" content="#08090c">
 	<link rel="canonical" href="https://goonnation.xyz/">
-	<link rel="icon" type="image/svg+xml" href="assets/img/mark.svg">
-	<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png">
+	<link rel="icon" type="image/svg+xml" href="assets/img/mark.svg?v=0.17.1">
+	<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png?v=0.17.1">
 	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="Goon Nation">
@@ -27,7 +27,7 @@
 	<header class="nav" id="nav">
 		<div class="wrap nav-inner">
 			<a class="brand" href="#top" aria-label="Goon Client home">
-				<img src="assets/img/mark.svg" alt="" width="36" height="36">
+				<img data-brand src="assets/img/mark.svg?v=0.17.1" alt="" width="36" height="36">
 				<span class="wordmark">GOON <em>CLIENT</em></span>
 			</a>
 			<ul class="nav-links" id="nav-links">
@@ -53,13 +53,13 @@
 			<div class="hero-bg" aria-hidden="true"><img src="assets/img/hero-bg.jpg" alt="" width="960" height="540"></div>
 			<div class="wrap">
 				<div class="hero-copy">
-					<span class="chip glass"><b>v<span data-version>0.15.0</span></b>Minecraft <span data-mc>26.3</span><span class="sep"></span>Fabric<span class="sep chip-extra"></span><span class="chip-extra">Free and open source</span></span>
+					<span class="chip glass"><b>v<span data-version>0.17.2</span></b>Minecraft <span data-mc>26.3</span><span class="sep"></span>Fabric<span class="sep chip-extra"></span><span class="chip-extra">Free and open source</span></span>
 					<h1>The PvE client that<br><span class="accent">looks the part.</span></h1>
 					<p class="hero-sub">A frosted-glass HUD, sixteen themes, waypoints, trackers and a tuned mod pack. Made by friends, for playing with friends. Set up in one click.</p>
 					<div class="hero-cta" id="download">
 						<a class="btn btn-primary btn-big" href="download/GoonClient-Launcher-windows.zip" download>
 							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5l7.5-1.05V11.5H3V5.5zm0 13l7.5 1.05V12.5H3v6zm8.5 1.2L21 21v-8.5h-9.5v7.2zm0-15.4v7.2H21V3l-9.5 1.3z"/></svg>
-							Download for Windows <span class="meta" data-size="launcher">58 MB</span>
+							Download for Windows <span class="meta" data-size="launcher">56 MB</span>
 						</a>
 						<a class="btn btn-big" href="download/GoonClient.mrpack" download>
 							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 7.5l-9-4.5-9 4.5 9 4.5 9-4.5z"/><path d="M3 7.5v9l9 4.5 9-4.5v-9M12 12v9"/></svg>
@@ -86,7 +86,7 @@
 				</div>
 
 				<div class="stats">
-					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/></svg><span class="div"></span>67<span class="unit">modules</span></span>
+					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/></svg><span class="div"></span>71<span class="unit">modules</span></span>
 					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 7.5l-9-4.5-9 4.5 9 4.5 9-4.5z"/><path d="M3 7.5v9l9 4.5 9-4.5v-9M12 12v9"/></svg><span class="div"></span><strong data-mods>23</strong><span class="unit">mods in the pack</span></span>
 					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.7-.8 1.7-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.8-1.7 1.7-1.7H16a5 5 0 0 0 5-5c0-4-4-7.2-9-7.2z"/><circle cx="7.5" cy="11.5" r="1"/><circle cx="10" cy="7.5" r="1"/><circle cx="15" cy="7.5" r="1"/></svg><span class="div"></span>16<span class="unit">themes</span></span>
 					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg><span class="div"></span>GPL-3.0<span class="unit">open source</span></span>
@@ -140,11 +140,11 @@
 				<div class="features">
 					<article class="feature glass reveal">
 						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="17" height="16" rx="3"/><path d="M3.5 9h17M8 4v5"/></svg></div><span class="div"></span><h3>ClickGUI and Settings</h3></div>
-						<p>Press <kbd>Right Shift</kbd> for six frosted columns of modules, search with <kbd>Ctrl</kbd>+<kbd>F</kbd>, and a Settings window for the HUD, interface, themes and saved setups.</p>
+						<p>Press <kbd>Right Shift</kbd> for a frosted-glass menu: category tabs across the top and icon cards in a three-column grid, search with <kbd>Ctrl</kbd>+<kbd>F</kbd>, and a Settings window for the HUD, interface, themes and saved setups.</p>
 					</article>
 					<article class="feature glass reveal">
 						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18M9 6l3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3M18 9l3 3-3 3"/></svg></div><span class="div"></span><h3>HUD editor</h3></div>
-						<p>Drag, snap and resize any panel. Select one and every setting it has sits right beside it, from its style to its scale.</p>
+						<p>Drag any panel and it lands exactly where you drop it, snapping to edges and other panels. Select one and every setting it has sits right beside it.</p>
 					</article>
 					<article class="feature glass reveal">
 						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><span class="div"></span><h3>Waypoints and minimap</h3></div>
@@ -184,7 +184,7 @@
 				<div class="section-head reveal">
 					<span class="eyebrow">Themes</span>
 					<h2>Sixteen looks, one click each</h2>
-					<p>Pick a theme here and this page and every screenshot switch to it, just like in the client.</p>
+					<p>Pick a theme here and the page, logo and themed client previews switch to it, just like in the client.</p>
 				</div>
 				<div class="themes">
 					<div class="swatches glass reveal" role="group" aria-label="Theme">
@@ -241,7 +241,7 @@
 					<div class="frame glass">
 						<div class="stage">
 							<img class="active" data-shot="hud" data-themed src="assets/img/shot-hud-1600.webp" srcset="assets/img/shot-hud-800.webp 800w, assets/img/shot-hud-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="In game with the Goon Client HUD: FPS and memory pills, Potions, Keybinds, Cooldowns and Inventory panels, a target card and the glass hotbar" width="1600" height="900" loading="lazy">
-							<img data-shot="menu" data-themed src="assets/img/shot-menu-1600.webp" srcset="assets/img/shot-menu-800.webp 800w, assets/img/shot-menu-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The ClickGUI: six frosted columns of modules with check marks for the ones that are on" width="1600" height="900" loading="lazy">
+							<img data-shot="menu" data-themed src="assets/img/shot-menu-1600.webp" srcset="assets/img/shot-menu-800.webp 800w, assets/img/shot-menu-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The ClickGUI: one centered glass box with category tabs, icon cards, Options and Enabled buttons" width="1600" height="900" loading="lazy">
 							<img data-shot="settings" data-themed src="assets/img/shot-settings-1600.webp" srcset="assets/img/shot-settings-800.webp 800w, assets/img/shot-settings-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The Settings window on its HUD page: a card with a switch for every HUD element" width="1600" height="900" loading="lazy">
 							<img data-shot="module" src="assets/img/shot-module-1600.webp" srcset="assets/img/shot-module-800.webp 800w, assets/img/shot-module-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="A module's settings panel with switches, sliders and option lists" width="1600" height="900" loading="lazy">
 							<img data-shot="editor" src="assets/img/shot-editor-1600.webp" srcset="assets/img/shot-editor-800.webp 800w, assets/img/shot-editor-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The HUD editor with the Potions panel selected and its settings listed beside it" width="1600" height="900" loading="lazy">
@@ -285,8 +285,8 @@
 					<h2>Press Play. That's the setup.</h2>
 					<p class="lede">The Goon Client Launcher gets Minecraft <span data-mc>26.3</span>, Fabric and the whole mod pack ready for you, then starts the game.</p>
 					<ul class="checks">
-						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>One click.</strong> Installs the game, Fabric, Goon Client and every mod in the pack.</span></li>
-						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Updates itself.</strong> New versions download when you open the launcher, and every file is checked against its checksum.</span></li>
+						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>One click.</strong> Sign in with Microsoft, then Play installs the game, Fabric, Goon Client and every mod in the pack.</span></li>
+						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Pack updates.</strong> New versions download when you open the launcher, and every file is checked against its checksum.</span></li>
 						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Fast first launch.</strong> Reuses game files you already have from the Minecraft Launcher instead of downloading them again.</span></li>
 						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>Its own folder.</strong> Goon Client lives in <code>.goonclient</code>, so your normal worlds and settings are never touched.</span></li>
 					</ul>
@@ -373,8 +373,8 @@
 				</div>
 				<div class="open">
 					<article class="feature glass reveal">
-						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg></div><span class="div"></span><h3>Source in every download</h3></div>
-						<p>The launcher zip includes the full source, licence and notices, so you always have the code for the exact build you run.</p>
+						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg></div><span class="div"></span><h3>Source, separately available</h3></div>
+						<p>Get the <a href="download/GoonClient-Source.zip" download>source for this release</a> separately. The launcher keeps its licence and notices, without carrying the source archive.</p>
 					</article>
 					<article class="feature glass reveal">
 						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 12h6M12 9v6"/></svg></div><span class="div"></span><h3>Built on Combatant</h3></div>
@@ -398,24 +398,13 @@
 				</div>
 				<article class="changelog glass reveal">
 <!-- changelog:start -->
-					<div class="changelog-head"><h3>Goon Client v0.15.0</h3><span>A new look, top to bottom</span></div>
+					<div class="changelog-head"><h3>Goon Client v0.17.2</h3><span>Microsoft sign-in correction</span></div>
 					<ul>
-						<li class="add">New Goon Client logo: a glass tile with a rounded-square G in your theme colour.</li>
-						<li class="add">Nation Noir cape, and every cape redrawn in the new style with the Goon mark.</li>
-						<li class="add">goonnation.xyz rebuilt: frosted glass, all 16 themes (the screenshots switch with them) and a cape gallery.</li>
-						<li class="add">Launcher restyled to match: new logo, Noir pink and glass panels.</li>
-						<li class="add">HUD ported from Combatant's source: its exact sizes, gaps, colours and Onest font, scaling with your screen.</li>
-						<li class="add">Real frosted glass: the world behind the HUD, hotbar and menus is blurred live.</li>
-						<li class="change">Settings, pause menu, main menu and Wardrobe use the see-through glass.</li>
-						<li class="change">HUD editor lists every setting of the selected element.</li>
-						<li class="change">Potions, Keybinds, Cooldowns, Inventory, target card and notifications match Combatant's layout.</li>
-						<li class="change">Theme colours are Combatant's exact ones (Noir pink is a little brighter).</li>
-						<li class="change">Built-in setups only switch modules now; your theme and HUD layout stay put.</li>
-						<li class="change">Discord status works on Windows again and shows the right symbols.</li>
-						<li class="change">Goon Client is now GPL-3.0; the launcher includes the source and credits Combatant.</li>
-						<li class="change">Bundled mods no longer pin exact versions; EntityCulling is now an optional separate install.</li>
+						<li class="change">Microsoft sign-in now requests the Xbox-specific refresh permission used by Prism Launcher and Microsoft's Xbox documentation.</li>
+						<li class="change">Updated both first sign-in and saved-account refresh; Goon's own approved app ID stays in use.</li>
+						<li class="add">Keeps the new cut-corner G logo, matching launcher and sixteen themed website previews.</li>
+						<li class="change">Source remains a separate download, outside the launcher.</li>
 					</ul>
-					<p class="intro">Load Settings &gt; Configs &gt; Combatant for the full HUD.</p>
 <!-- changelog:end -->
 				</article>
 			</div>
@@ -472,7 +461,7 @@
 					</details>
 					<details class="glass reveal">
 						<summary>Is it open source?</summary>
-						<p>Yes, under the GPL-3.0. The launcher download includes the source for that exact version. The HUD design comes from <a href="https://github.com/pivosos2007/combatant-client" target="_blank" rel="noopener">Combatant Client</a>, also GPL-3.0.</p>
+						<p>Yes, under the GPL-3.0. The <a href="download/GoonClient-Source.zip" download>separate source download</a> matches the current release. The HUD design comes from <a href="https://github.com/pivosos2007/combatant-client" target="_blank" rel="noopener">Combatant Client</a>, also GPL-3.0.</p>
 					</details>
 					<details class="glass reveal">
 						<summary>Will it mess with my normal Minecraft?</summary>
@@ -494,7 +483,7 @@
 		<section>
 			<div class="wrap">
 				<div class="cta glass reveal">
-					<img src="assets/img/mark.svg" alt="" width="68" height="68">
+					<img data-brand src="assets/img/mark.svg?v=0.17.1" alt="" width="68" height="68">
 					<h2>Ready to play?</h2>
 					<p>Grab the launcher and you'll be in game in a couple of minutes.</p>
 					<div class="hero-cta">
@@ -513,7 +502,7 @@
 		<div class="wrap">
 			<div class="foot">
 				<a class="brand" href="#top">
-					<img src="assets/img/mark.svg" alt="" width="36" height="36">
+					<img data-brand src="assets/img/mark.svg?v=0.17.1" alt="" width="36" height="36">
 					<span class="wordmark">GOON <em>CLIENT</em></span>
 				</a>
 				<nav class="foot-links" aria-label="Footer">
@@ -528,6 +517,6 @@
 		</div>
 	</footer>
 
-	<script src="assets/js/site.js" defer></script>
+	<script src="assets/js/site.js?v=0.17.1" defer></script>
 </body>
 </html>
