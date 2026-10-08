@@ -1,9 +1,9 @@
 {
-    "version": "0.17.2",
+    "version": "0.17.3",
     "minecraft": "26.3",
-    "mrpack": "https://goonnation.xyz/download/GoonClient.mrpack?v=0.17.2",
-    "sha512": "14cc7175016977e9cce652fc5d6b250722b04efb37c4e83df43854f496c420dd04f4933d96748b71a6a3f586978fb5b5890fa94cef39f19b693f5b7f1767ae2c",
-    "size": 29968387,
+    "mrpack": "https://goonnation.xyz/download/GoonClient.mrpack?v=0.17.3",
+    "sha512": "111c8e5d9c891d8f0cd4282b88da7626e0775bf4d6ca9cc4273af855b5469f9f5622f7ebe3ac6c4b98a11f85cb250a09b53f7297919c147028823b9df2a65112",
+    "size": 29968343,
     "minLauncher": "0.9.0",
     "page": "https://goonnation.xyz/#download"
 }
