@@ -53,7 +53,7 @@
 			<div class="hero-bg" aria-hidden="true"><img src="assets/img/hero-bg.jpg" alt="" width="960" height="540"></div>
 			<div class="wrap">
 				<div class="hero-copy">
-					<span class="chip glass"><b>v<span data-version>0.18.3</span></b>Minecraft <span data-mc>26.3</span><span class="sep"></span>Fabric<span class="sep chip-extra"></span><span class="chip-extra">Free client</span></span>
+					<span class="chip glass"><b>v<span data-version>0.18.4</span></b>Minecraft <span data-mc>26.3</span><span class="sep"></span>Fabric<span class="sep chip-extra"></span><span class="chip-extra">Free client</span></span>
 					<h1>The PvE client that<br><span class="accent">looks the part.</span></h1>
 					<p class="hero-sub">A frosted-glass HUD, sixteen themes, waypoints, trackers and a tuned mod pack. Made by friends, for playing with friends. Set up in one click.</p>
 					<div class="hero-cta" id="download">
@@ -86,7 +86,7 @@
 				</div>
 
 				<div class="stats">
-					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/></svg><span class="div"></span>74<span class="unit">modules</span></span>
+					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/></svg><span class="div"></span>75<span class="unit">modules</span></span>
 					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 7.5l-9-4.5-9 4.5 9 4.5 9-4.5z"/><path d="M3 7.5v9l9 4.5 9-4.5v-9M12 12v9"/></svg><span class="div"></span><strong data-mods>23</strong><span class="unit">mods in the pack</span></span>
 					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.7-.8 1.7-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.8-1.7 1.7-1.7H16a5 5 0 0 0 5-5c0-4-4-7.2-9-7.2z"/><circle cx="7.5" cy="11.5" r="1"/><circle cx="10" cy="7.5" r="1"/><circle cx="15" cy="7.5" r="1"/></svg><span class="div"></span>16<span class="unit">themes</span></span>
 					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg><span class="div"></span>PvE<span class="unit">made for friends</span></span>
@@ -410,19 +410,15 @@
 				</div>
 				<article class="changelog glass reveal">
 <!-- changelog:start -->
-					<p class="intro">Goon Client v0.18.3 — survival companions</p>
+					<p class="intro">Goon Client v0.18.4 — quieter bases, working shortcuts</p>
 					<ul>
-						<li class="add">Expedition Planner: saved Exploration, Nether and boss-trip packing lists with actual carried-item counts, manual checklists and waypoint destinations.</li>
-						<li class="add">Performance Notebook: record a 60-second gameplay window, review frame-time spikes and export a local CSV and summary.</li>
-						<li class="add">Launch Checkup: inspect local mod archives and save an advisory report from the launcher. It changes no mods; Fabric decides compatibility.</li>
-						<li class="add">Private RAM reading alongside resident RAM and Java heap, with clear labels.</li>
-						<li class="change">Main-menu HUD editing now shows live RAM instead of the old fixed example.</li>
-						<li class="change">Drafts survive clearing saved expedition plans; plan switching and delete confirmations keep the correct target.</li>
-						<li class="change">Performance captures exclude menus, loading, pause and focus transitions, including brief transitions between frames.</li>
-						<li class="change">Bounded local file reads and mod archive inspection handle damaged or oversized inputs without overwriting originals.</li>
-						<li class="change">Website updated with the new tools, current downloads and all sixteen current main-menu previews.</li>
+						<li class="add">Sound Control: separate levels for villager and farm-animal chatter, Nether portals, rain, thunder, pistons, minecarts, fire/lava/campfires, anvils and beacons.</li>
+						<li class="add">Quiet base preset and one-click restore to normal levels. Sound Control starts off; all sliders initially stay at 100%.</li>
+						<li class="change">Sound changes update active loops too. Muted loops can resume; vanilla volume sliders, subtitles, pitch and distance remain unchanged.</li>
+						<li class="change">Module shortcuts work while holding your configured Ctrl/Shift sprint or sneak keys, including remapped left/right controls.</li>
+						<li class="change">Chat/menu, debug, OS shortcuts, repeats and conflicting bindings remain guarded.</li>
 					</ul>
-					<p class="intro">Open Expedition Planner under Inventory. Open Performance Notebook from FPS Graph. Reports and plans stay local. Includes the launcher and container housekeeping improvements from 0.18.2.</p>
+					<p class="intro">Open Right Shift &gt; Utility &gt; Sound Control &gt; Options. Enable it and adjust the sounds you want quieter. No new account or service is needed.</p>
 <!-- changelog:end -->
 				</article>
 			</div>
