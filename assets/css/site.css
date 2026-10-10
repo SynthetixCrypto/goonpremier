@@ -18,7 +18,7 @@
 	--a2: #e07a88;
 	--accent-text: color-mix(in srgb, var(--a1) 62%, #f4f4f4);
 	--accent-soft: color-mix(in srgb, var(--a1) 16%, transparent);
-	--on-accent: #fff;
+	--on-accent: #000;
 	--radius: 16px;
 	--max: 1180px;
 	--gutter: clamp(16px, 4vw, 32px);

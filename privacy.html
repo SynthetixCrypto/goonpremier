@@ -15,7 +15,7 @@
 	<meta property="og:title" content="Goon Client: privacy and sign-in">
 	<meta property="og:description" content="How Goon Client signs you in with Microsoft and what it does (and doesn't) do with your account.">
 	<meta property="og:image" content="https://goonnation.xyz/assets/img/og.jpg">
-	<link rel="stylesheet" href="assets/css/site.css">
+	<link rel="stylesheet" href="assets/css/site.css?v=0.18.3">
 	<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -46,8 +46,8 @@
 	<main id="main" class="wrap">
 		<article class="doc">
 			<h1>Privacy and sign-in</h1>
-			<p class="lede">The short version: Goon Client doesn't collect, sell or share anything about you. There are no Goon Nation servers that your data goes to. Here is exactly what happens with your account.</p>
-			<p class="updated">Last updated 2 October 2026</p>
+			<p class="lede">Your password stays on Microsoft's pages. Settings, trip plans and reports stay on your device. Optional cape sharing and Discord Presence are described below.</p>
+			<p class="updated">Last updated 9 October 2026</p>
 
 			<section class="glass">
 				<h2>Who makes Goon Client</h2>
@@ -63,12 +63,12 @@
 					<li>The launcher swaps Microsoft's token for an Xbox Live token, then for a Minecraft token, the same way the official Minecraft Launcher does.</li>
 					<li>It reads your Minecraft profile (name, UUID and skin) to check that the account owns Minecraft: Java Edition. Accounts that don't own the game can't play.</li>
 				</ol>
-				<p>Until Mojang approves Goon Client's app for the Minecraft API, pressing Play hands you over to the official Minecraft Launcher, which signs you in instead. Goon Client doesn't see or store anything in that case.</p>
+				<p>Goon Client's Microsoft application has been approved for Minecraft API access. The launcher supports direct launch after Microsoft sign-in; the official launcher remains an optional setting.</p>
 			</section>
 
 			<section class="glass" id="stored">
 				<h2>What's stored on your computer</h2>
-				<p>Everything lives in Goon Client's own folder, <code>%APPDATA%\.goonclient</code>. Nothing is uploaded anywhere.</p>
+				<p>Everything lives in Goon Client's own folder, <code>%APPDATA%\.goonclient</code>. The local tools do not upload plans, container history or reports.</p>
 				<div class="table-scroll">
 					<table>
 						<thead>
@@ -77,7 +77,8 @@
 						<tbody>
 							<tr><td><code>account.json</code></td><td>Your Minecraft name, UUID and skin link, the Minecraft access token and the Microsoft refresh token that keeps you signed in. Never your password. Signing out deletes this file.</td></tr>
 							<tr><td><code>launcher.json</code></td><td>Launcher settings, such as how much RAM the game gets.</td></tr>
-							<tr><td><code>config/goonclient/</code></td><td>Which modules are on, their settings, HUD positions and your waypoints.</td></tr>
+							<tr><td><code>config/goonclient/</code></td><td>Module settings, HUD positions, waypoints, saved setups, remembered containers, cosmetics preferences and expedition plans. These can include local world locations.</td></tr>
+							<tr><td><code>goonclient/reports/</code></td><td>Farm CSV/Markdown exports, Performance Notebook captures and Launch Checkup reports, saved only when you choose Export or Save report.</td></tr>
 							<tr><td><code>game-files/</code></td><td>Minecraft itself, its libraries and assets, downloaded from Mojang.</td></tr>
 						</tbody>
 					</table>
@@ -86,7 +87,7 @@
 
 			<section class="glass" id="services">
 				<h2>Which services it talks to</h2>
-				<p>The launcher only connects to these services, and only for the reason listed. Your sign-in tokens are only ever sent to the Microsoft, Xbox Live and Minecraft services.</p>
+				<p>The launcher connects to the services below to sign in, install, update and display your skin. Your sign-in tokens are only ever sent to the Microsoft, Xbox Live and Minecraft services.</p>
 				<div class="table-scroll">
 					<table>
 						<thead>
@@ -99,11 +100,21 @@
 							<tr><td><code>piston-meta.mojang.com</code><br><code>piston-data.mojang.com</code><br><code>libraries.minecraft.net</code><br><code>resources.download.minecraft.net</code></td><td>Downloading Minecraft, its libraries, assets and Java runtime from Mojang.</td></tr>
 							<tr><td><code>meta.fabricmc.net</code><br><code>maven.fabricmc.net</code></td><td>Downloading the Fabric mod loader.</td></tr>
 							<tr><td><code>cdn.modrinth.com</code></td><td>Downloading the mods in the pack from Modrinth.</td></tr>
+                            <tr><td><code>goonnation.xyz</code></td><td>Checking release metadata and downloading pack updates. Automatic update checks can be disabled in launcher Settings.</td></tr>
+                            <tr><td>Minecraft profile skin URL</td><td>Downloading your skin image for the launcher account avatar.</td></tr>
 						</tbody>
 					</table>
 				</div>
-				<p>Once the game is running, Minecraft connects to Mojang and Microsoft services as it normally would (skins, multiplayer sign-in, Realms) and to the servers you choose to join. The Goon Client mod itself doesn't connect to anything.</p>
+				<p>Once the game is running, Minecraft connects to Mojang and Microsoft services as it normally would (skins, multiplayer sign-in, Realms) and to the servers you choose to join. The optional integrations below can also communicate with their configured services.</p>
 			</section>
+
+
+            <section class="glass" id="optional-sharing">
+                <h2>Optional sharing</h2>
+                <p><strong>Capes.</strong> Local wardrobe previews work without a service. If you configure a cosmetics service and enable sharing, the client looks up nearby player UUIDs there. Clicking Share equipped cape sends your Minecraft name, UUID, an account-verification challenge and cape choice. Your Minecraft token goes to Mojang for verification, never to the cosmetics service. Turning sharing off stops lookups; remove a previously published cape by sharing Original cape while connected.</p>
+                <p><strong>Discord Presence.</strong> When enabled, Goon Client sends activity through your local Discord desktop app. It can show menu/singleplayer/multiplayer status and elapsed time, depending on your preferences. It does not include server addresses. Discord controls whether friends can see the activity.</p>
+                <p><strong>Reports and plans.</strong> Launch Checkup and Performance Notebook exports omit account details, server identities and file paths. Expedition plans and remembered containers stay local. Goon Client does not automatically upload any of these files.</p>
+            </section>
 
 			<section class="glass" id="website">
 				<h2>This website</h2>
@@ -139,6 +150,6 @@
 		</div>
 	</footer>
 
-	<script src="assets/js/site.js?v=0.17.1" defer></script>
+	<script src="assets/js/site.js?v=0.18.3-final" defer></script>
 </body>
 </html>

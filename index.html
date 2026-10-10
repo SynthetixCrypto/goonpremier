@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Goon Client</title>
-	<meta name="description" content="Goon Client is a free, open-source PvE client for Minecraft Java 26.3 by Goon Nation: a frosted-glass HUD, sixteen themes, waypoints, trackers and a tuned mod pack, installed in one click.">
+	<meta name="description" content="Goon Client is a free PvE client for Minecraft Java 26.3 by Goon Nation: a frosted-glass HUD, sixteen themes, waypoints, trackers and a tuned mod pack, installed in one click.">
 	<meta name="theme-color" content="#08090c">
 	<link rel="canonical" href="https://goonnation.xyz/">
 	<link rel="icon" type="image/svg+xml" href="assets/img/mark.svg?v=0.17.1">
@@ -13,12 +13,12 @@
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="Goon Nation">
 	<meta property="og:title" content="Goon Client: the PvE client for Minecraft 26.3">
-	<meta property="og:description" content="A frosted-glass HUD, sixteen themes, waypoints, trackers and a tuned mod pack. Free, open source, installed in one click.">
+	<meta property="og:description" content="A frosted-glass HUD, sixteen themes, waypoints, trackers and a tuned mod pack. Free, installed in one click.">
 	<meta property="og:url" content="https://goonnation.xyz/">
 	<meta property="og:image" content="https://goonnation.xyz/assets/img/og.jpg">
 	<meta name="twitter:card" content="summary_large_image">
 	<link rel="preload" href="assets/fonts/inter-bold.ttf" as="font" type="font/ttf" crossorigin>
-	<link rel="stylesheet" href="assets/css/site.css">
+	<link rel="stylesheet" href="assets/css/site.css?v=0.18.3">
 	<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -53,7 +53,7 @@
 			<div class="hero-bg" aria-hidden="true"><img src="assets/img/hero-bg.jpg" alt="" width="960" height="540"></div>
 			<div class="wrap">
 				<div class="hero-copy">
-					<span class="chip glass"><b>v<span data-version>0.17.3</span></b>Minecraft <span data-mc>26.3</span><span class="sep"></span>Fabric<span class="sep chip-extra"></span><span class="chip-extra">Free and open source</span></span>
+					<span class="chip glass"><b>v<span data-version>0.18.3</span></b>Minecraft <span data-mc>26.3</span><span class="sep"></span>Fabric<span class="sep chip-extra"></span><span class="chip-extra">Free client</span></span>
 					<h1>The PvE client that<br><span class="accent">looks the part.</span></h1>
 					<p class="hero-sub">A frosted-glass HUD, sixteen themes, waypoints, trackers and a tuned mod pack. Made by friends, for playing with friends. Set up in one click.</p>
 					<div class="hero-cta" id="download">
@@ -72,7 +72,7 @@
 				<div class="hero-shot reveal">
 					<div class="glow" aria-hidden="true"></div>
 					<div class="frame glass">
-						<img data-theme-shot="hud" src="assets/img/shot-hud-1600.webp" srcset="assets/img/shot-hud-800.webp 800w, assets/img/shot-hud-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="Goon Client in game: FPS and memory pills, the Potions, Keybinds, Cooldowns and Inventory panels, a target card under the crosshair and a glass hotbar" width="1600" height="900" fetchpriority="high">
+						<img data-theme-shot="hud" src="assets/img/shot-hud-1600.webp" srcset="assets/img/shot-hud-800.webp 800w, assets/img/shot-hud-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="Goon Client in game: FPS and memory pills, the Potions, Keybinds, Cooldowns and Inventory panels, a target card and a glass hotbar" width="1600" height="900" fetchpriority="high">
 					</div>
 					<div class="float float-a" aria-hidden="true">
 						<span class="hud-pill"><img src="assets/img/hud/fps.png" alt="" width="21" height="21"><span class="div"></span>144<span class="unit">FPS</span></span>
@@ -81,15 +81,15 @@
 						<span class="hud-pill"><img src="assets/img/hud/speedometer.png" alt="" width="20" height="20"><span class="div"></span>5.6<span class="unit">b/s</span></span>
 					</div>
 					<div class="float float-c" aria-hidden="true">
-						<span class="hud-pill"><img src="assets/img/hud/memory.png" alt="" width="20" height="20"><span class="div"></span>2148/8192<span class="unit">MB</span><span class="unit">[26%]</span></span>
+						<span class="hud-pill"><img src="assets/img/hud/memory.png" alt="" width="20" height="20"><span class="div"></span>2.1<span class="unit">GB process RAM</span></span>
 					</div>
 				</div>
 
 				<div class="stats">
-					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/></svg><span class="div"></span>71<span class="unit">modules</span></span>
+					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/></svg><span class="div"></span>74<span class="unit">modules</span></span>
 					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 7.5l-9-4.5-9 4.5 9 4.5 9-4.5z"/><path d="M3 7.5v9l9 4.5 9-4.5v-9M12 12v9"/></svg><span class="div"></span><strong data-mods>23</strong><span class="unit">mods in the pack</span></span>
 					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.7-.8 1.7-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.8-1.7 1.7-1.7H16a5 5 0 0 0 5-5c0-4-4-7.2-9-7.2z"/><circle cx="7.5" cy="11.5" r="1"/><circle cx="10" cy="7.5" r="1"/><circle cx="15" cy="7.5" r="1"/></svg><span class="div"></span>16<span class="unit">themes</span></span>
-					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg><span class="div"></span>GPL-3.0<span class="unit">open source</span></span>
+					<span class="hud-pill reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg><span class="div"></span>PvE<span class="unit">made for friends</span></span>
 				</div>
 			</div>
 		</section>
@@ -178,6 +178,42 @@
 			</div>
 		</section>
 
+        <section class="section" id="survival-tools">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Survival companions</span>
+                    <h2>Plan the trip. Keep the details.</h2>
+                    <p>Local tools for packing, finding supplies and understanding your sessions.</p>
+                </div>
+                <div class="features">
+                    <article class="feature glass reveal">
+                        <div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/><path d="M7 7.5h.01M7 17h.01"/></svg></div><span class="div"></span><h3>Server-linked setups</h3></div>
+                        <p>Link a saved setup in Configs. It loads on your next join, and your previous settings return when you leave.</p>
+                    </article>
+                    <article class="feature glass reveal">
+                        <div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5v11H3zM3 8l9 5 9-5M12 13v8"/></svg></div><span class="div"></span><h3>Container Bookmarks</h3></div>
+                        <p>Search items in containers you previously opened, then copy a location or make a waypoint. Remembered contents can become stale until reopened.</p>
+                    </article>
+                    <article class="feature glass reveal">
+                        <div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h17M8 16v-5M13 16V7M18 16v-8"/></svg></div><span class="div"></span><h3>Farm reports</h3></div>
+                        <p>Review your observed pickups and XP, then export CSV or Markdown. Rates use at least one minute; these are not server-wide production totals.</p>
+                    </article>
+                    <article class="feature glass reveal">
+                        <div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M16 8l-3 5-5 3 3-5z"/></svg></div><span class="div"></span><h3>Expedition Planner</h3></div>
+                        <p>Save Exploration, Nether and boss-trip packing lists. Check actual carried item counts, tick manual tasks and choose a waypoint destination. Open Inventory &gt; Expedition Planner.</p>
+                    </article>
+                    <article class="feature glass reveal">
+                        <div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></div><span class="div"></span><h3>Performance Notebook</h3></div>
+                        <p>Record a 60-second gameplay window. Review frame-time spikes and export a local CSV and summary. Open FPS Graph &gt; Performance Notebook. Menus and focus loss are excluded.</p>
+                    </article>
+                    <article class="feature glass reveal">
+                        <div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-8 9-8 9s-8-4-8-9V6zM8 12l3 3 5-6"/></svg></div><span class="div"></span><h3>Launch Checkup</h3></div>
+                        <p>Inspect local mod archives from the launcher and save a report without account details or paths. It changes no mods; Fabric still decides version compatibility at launch.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
 		<!-- Themes -->
 		<section class="section" id="themes">
 			<div class="wrap">
@@ -246,13 +282,13 @@
 							<img data-shot="module" src="assets/img/shot-module-1600.webp" srcset="assets/img/shot-module-800.webp 800w, assets/img/shot-module-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="A module's settings panel with switches, sliders and option lists" width="1600" height="900" loading="lazy">
 							<img data-shot="editor" src="assets/img/shot-editor-1600.webp" srcset="assets/img/shot-editor-800.webp 800w, assets/img/shot-editor-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The HUD editor with the Potions panel selected and its settings listed beside it" width="1600" height="900" loading="lazy">
 							<img data-shot="configs" src="assets/img/shot-configs-1600.webp" srcset="assets/img/shot-configs-800.webp 800w, assets/img/shot-configs-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The Configs page with built-in setups like Combatant, Survival, Builder and Boss run" width="1600" height="900" loading="lazy">
-							<img data-shot="title" src="assets/img/shot-title-1600.webp" srcset="assets/img/shot-title-800.webp 800w, assets/img/shot-title-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The Goon Client main menu with the logo, a button column, a What's new card and the account card" width="1600" height="900" loading="lazy">
+							<img data-shot="title" data-themed src="assets/img/shot-title-1600.webp" srcset="assets/img/shot-title-800.webp 800w, assets/img/shot-title-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The Goon Client main menu preview" width="1600" height="900" loading="lazy">
 							<img data-shot="pause" src="assets/img/shot-pause-1600.webp" srcset="assets/img/shot-pause-800.webp 800w, assets/img/shot-pause-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The pause menu over the game, with glass buttons and a This session card" width="1600" height="900" loading="lazy">
 							<img data-shot="log" src="assets/img/shot-log-1600.webp" srcset="assets/img/shot-log-800.webp 800w, assets/img/shot-log-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The Adventure Log listing finds, a boss fight, an advancement, a death and a trip to the Nether" width="1600" height="900" loading="lazy">
 							<img data-shot="options" src="assets/img/shot-options-1600.webp" srcset="assets/img/shot-options-800.webp 800w, assets/img/shot-options-1600.webp 1600w" sizes="(max-width: 1100px) 94vw, 1060px" alt="The Goon Options hub with cards for every settings page and a field-of-view slider" width="1600" height="900" loading="lazy">
 						</div>
 					</div>
-					<p class="caption" id="caption" aria-live="polite"><strong>In game.</strong> FPS and memory pills, Potions, Keybinds, Cooldowns and Inventory panels, a target card under the crosshair and the glass hotbar.</p>
+					<p class="caption" id="caption" aria-live="polite"><strong>In game.</strong> FPS and memory pills, Potions, Keybinds, Cooldowns and Inventory panels, a target card and the glass hotbar.</p>
 				</div>
 			</div>
 		</section>
@@ -263,7 +299,7 @@
 				<div class="section-head reveal">
 					<span class="eyebrow">Wardrobe</span>
 					<h2>Capes for the crew</h2>
-					<p>Ten original capes in the Goon look, made for this client. Equip one from the main menu and see it in third person, or share it with friends who play Goon Client too.</p>
+					<p>Ten original capes in the Goon look, made for this client. Equip one from the main menu and see it in third person, with optional sharing when your cosmetics service is configured.</p>
 				</div>
 				<div class="frame glass reveal capes-strip">
 					<img src="assets/img/capes-2000.webp" srcset="assets/img/capes-1000.webp 1000w, assets/img/capes-2000.webp 2000w" sizes="(max-width: 1100px) 94vw, 1180px" alt="All ten Goon capes side by side: Nation Noir, Nation Mint, After Hours, Nation Gold, Glacier, Redline, Deep Blue, Rose Signal, Ghost and Ember" width="2000" height="396" loading="lazy">
@@ -278,11 +314,12 @@
 		<section class="section" id="launcher">
 			<div class="wrap split">
 				<div class="launcher-shot reveal">
-					<img src="assets/img/launcher-home.webp" alt="The Goon Client Launcher home page with a big Play button and the What's new list" width="1000" height="620" loading="lazy">
+					<img data-launcher-shot src="assets/img/launcher-sky.webp" alt="The Goon Client Launcher home page with a big Play button and the What's new list" width="1000" height="620" loading="lazy">
 				</div>
 				<div class="reveal">
 					<span class="eyebrow">Launcher</span>
 					<h2>Press Play. That's the setup.</h2>
+                    <p>Eight launcher themes, three backgrounds and optional motion. Sky opens by default; choose your own look in Appearance.</p>
 					<p class="lede">The Goon Client Launcher gets Minecraft <span data-mc>26.3</span>, Fabric and the whole mod pack ready for you, then starts the game.</p>
 					<ul class="checks">
 						<li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>One click.</strong> Sign in with Microsoft, then Play installs the game, Fabric, Goon Client and every mod in the pack.</span></li>
@@ -359,32 +396,7 @@
 						</ul>
 					</div>
 				</div>
-				<p class="pack-note reveal">Shaders are included but off by default. Want culling for hidden mobs? Install <a href="https://modrinth.com/mod/entityculling" target="_blank" rel="noopener">EntityCulling</a> from Modrinth yourself; its terms don't allow us to bundle it.</p>
-			</div>
-		</section>
-
-		<!-- Open source -->
-		<section class="section" id="source">
-			<div class="wrap">
-				<div class="section-head reveal">
-					<span class="eyebrow">Open source</span>
-					<h2>Free software, credited properly</h2>
-					<p>Goon Client is licensed under the GPL-3.0. You can read, change and share every line.</p>
-				</div>
-				<div class="open">
-					<article class="feature glass reveal">
-						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg></div><span class="div"></span><h3>Source, separately available</h3></div>
-						<p>Get the <a href="download/GoonClient-Source.zip" download>source for this release</a> separately. The launcher keeps its licence and notices, without carrying the source archive.</p>
-					</article>
-					<article class="feature glass reveal">
-						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 12h6M12 9v6"/></svg></div><span class="div"></span><h3>Built on Combatant</h3></div>
-						<p>The HUD and glass design are ported from <a href="https://github.com/pivosos2007/combatant-client" target="_blank" rel="noopener">Combatant Client</a> by pivosos2007, under the same GPL-3.0 licence.</p>
-					</article>
-					<article class="feature glass reveal">
-						<div class="feature-head"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7.5l-9-4.5-9 4.5 9 4.5 9-4.5z"/><path d="M3 7.5v9l9 4.5 9-4.5v-9M12 12v9"/></svg></div><span class="div"></span><h3>Mods keep their licences</h3></div>
-						<p>Bundled mods are unmodified and keep their own licences and authors, listed with links in every build. Xaero's maps are included with the author's modpack permission.</p>
-					</article>
-				</div>
+				<p class="pack-note reveal">Shader support is included; shader packs are off by default. Want culling for hidden mobs? Install <a href="https://modrinth.com/mod/entityculling" target="_blank" rel="noopener">EntityCulling</a> from Modrinth yourself; its terms don't allow us to bundle it.</p>
 			</div>
 		</section>
 
@@ -398,13 +410,19 @@
 				</div>
 				<article class="changelog glass reveal">
 <!-- changelog:start -->
-					<div class="changelog-head"><h3>Goon Client v0.17.3</h3><span>Microsoft verification page</span></div>
+					<p class="intro">Goon Client v0.18.3 — survival companions</p>
 					<ul>
-						<li class="change">Sign-in opens the exact verification page supplied by Microsoft, without the unsupported code-prefill shortcut.</li>
-						<li class="change">Paste the copied code on Microsoft's page, then continue signing in there.</li>
-						<li class="change">Keeps Goon's approved app ID and the Xbox-specific permissions.</li>
-						<li class="add">Retains the new G logo, boxed glass menu and themed previews.</li>
+						<li class="add">Expedition Planner: saved Exploration, Nether and boss-trip packing lists with actual carried-item counts, manual checklists and waypoint destinations.</li>
+						<li class="add">Performance Notebook: record a 60-second gameplay window, review frame-time spikes and export a local CSV and summary.</li>
+						<li class="add">Launch Checkup: inspect local mod archives and save an advisory report from the launcher. It changes no mods; Fabric decides compatibility.</li>
+						<li class="add">Private RAM reading alongside resident RAM and Java heap, with clear labels.</li>
+						<li class="change">Main-menu HUD editing now shows live RAM instead of the old fixed example.</li>
+						<li class="change">Drafts survive clearing saved expedition plans; plan switching and delete confirmations keep the correct target.</li>
+						<li class="change">Performance captures exclude menus, loading, pause and focus transitions, including brief transitions between frames.</li>
+						<li class="change">Bounded local file reads and mod archive inspection handle damaged or oversized inputs without overwriting originals.</li>
+						<li class="change">Website updated with the new tools, current downloads and all sixteen current main-menu previews.</li>
 					</ul>
+					<p class="intro">Open Expedition Planner under Inventory. Open Performance Notebook from FPS Graph. Reports and plans stay local. Includes the launcher and container housekeeping improvements from 0.18.2.</p>
 <!-- changelog:end -->
 				</article>
 			</div>
@@ -416,7 +434,7 @@
 				<div class="section-head reveal">
 					<span class="eyebrow">Sign-in and privacy</span>
 					<h2>Your account stays yours</h2>
-					<p>Goon Client is made by friends, for friends. It doesn't collect anything about you.</p>
+					<p>Microsoft handles your password. Plans and reports stay local; optional cape sharing and Discord Presence are described below.</p>
 				</div>
 				<div class="trust">
 					<article class="feature glass reveal">
@@ -458,10 +476,6 @@
 					<details class="glass reveal">
 						<summary>Is it allowed on servers?</summary>
 						<p>Goon Client is made for survival quality of life, not for getting an edge in PvP. Still, every server has its own rules, and some don't allow things like minimaps or fullbright. Check your server's rules and turn off anything they don't allow.</p>
-					</details>
-					<details class="glass reveal">
-						<summary>Is it open source?</summary>
-						<p>Yes, under the GPL-3.0. The <a href="download/GoonClient-Source.zip" download>separate source download</a> matches the current release. The HUD design comes from <a href="https://github.com/pivosos2007/combatant-client" target="_blank" rel="noopener">Combatant Client</a>, also GPL-3.0.</p>
 					</details>
 					<details class="glass reveal">
 						<summary>Will it mess with my normal Minecraft?</summary>
@@ -508,15 +522,16 @@
 				<nav class="foot-links" aria-label="Footer">
 					<a href="#features">Features</a>
 					<a href="#changelog">Changelog</a>
-					<a href="#source">Open source</a>
+					<a href="licenses.html">Licenses and credits</a>
+					<a href="download/GoonClient-Source.zip" download>Source download</a>
 					<a href="privacy.html">Privacy and sign-in</a>
 					<a href="#download">Download</a>
 				</nav>
 			</div>
-			<p class="legal">&copy; <span data-year>2026</span> Goon Nation. Goon Client is free software under the GPL-3.0; its HUD design is adapted from Combatant Client by pivosos2007. NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT. Minecraft is a trademark of Mojang AB. Mods in the pack belong to their authors.</p>
+			<p class="legal">&copy; <span data-year>2026</span> Goon Nation. NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT. Minecraft is a trademark of Mojang AB. Mods in the pack belong to their authors.</p>
 		</div>
 	</footer>
 
-	<script src="assets/js/site.js?v=0.17.1" defer></script>
+	<script src="assets/js/site.js?v=0.18.3-final" defer></script>
 </body>
 </html>
